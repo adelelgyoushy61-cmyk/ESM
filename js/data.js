@@ -10,29 +10,29 @@ window.CATEGORIES = [
   { id: "ai", label: "ذكاء اصطناعي", color: "#1E90FF", ink: "#0B62B8" },
   { id: "data", label: "تحليل بيانات", color: "#1E90FF", ink: "#0B62B8" },
   { id: "security", label: "أمن سيبراني", color: "#1E90FF", ink: "#0B62B8" },
-  { id: "design", label: "uiux", color: "#1E90FF", ink: "#0B62B8" }
+  { id: "design", label: "design", color: "#1E90FF", ink: "#0B62B8" }
 ];
 
 window.DIPLOMAS = [
   {
     id: "frontend", name: "Front-End", category: "programming", icon: "bi-code-slash",
     url: "https://eraapro.com/frontend", keywords: "فرونت html css js react",
-    weeks: 18, hours: 160, projects: 5, tasks: 15
+    weeks: 18, hours: 146, projects: 4, tasks: 15
   },
   {
     id: "dotnet", name: "Back-End .NET", category: "programming", icon: "bi-server",
     url: "https://eraapro.com/dotnet", keywords: "باك اند دوت نت c# net",
-    weeks: 17, hours: 160, projects: 5, tasks: 17
+    weeks: 18, hours: 141, projects: 5, tasks: 17
   },
   {
     id: "php", name: "PHP", category: "programming", icon: "bi-filetype-php",
     url: "https://eraapro.com/php", keywords: "باك اند بي اتش بي laravel",
-    weeks: 16, hours: 120, projects: 5, tasks: 32
+    weeks: 16, hours: 112, projects: 5, tasks: 32
   },
   {
     id: "nodejs", name: "Node.js", category: "programming", icon: "bi-hdd-network",
     url: "https://eraapro.com/nodejs", keywords: "نود جي اس باك اند javascript",
-    weeks: 16, hours: 140, projects: 6, tasks: 16
+    weeks: 16, hours: 127, projects: 4, tasks: 16
   },
   {
     id: "java", name: "Back-End Java", category: "programming", icon: "bi-cup-hot",
@@ -42,7 +42,7 @@ window.DIPLOMAS = [
   {
     id: "flutter", name: "Flutter", category: "programming", icon: "bi-phone",
     url: "https://eraapro.com/flutter", keywords: "فلاتر موبايل تطبيقات dart",
-    weeks: 16, hours: 120, projects: 4, tasks: 16
+    weeks: 16, hours: 127, projects: 4, tasks: 16
   },
   {
     id: "cs8", name: "أساسيات البرمجة (CS8)", short: "CS8", category: "foundation", icon: "bi-cpu",
@@ -53,65 +53,59 @@ window.DIPLOMAS = [
       { icon: "bi-diagram-3", text: "Data Structure & Algorithms" }
     ],
     message:
-      `دبلومة أساسيات البرمجة (CS8) 
-
-1️⃣ المحتوى التعليمي
-• التطبيق العملي 80% والشرح النظري 20%
+      `🔹 **دبلومة أساسيات البرمجة – CS8**
+الدبلومة بتركز بشكل كبير على التطبيق العملي، بحيث يكون **80% تطبيق عملي و20% شرح نظري**، وهنبدأ معاك من الأساسيات لحد ما يكون عندك قاعدة قوية في البرمجة من خلال:
 • Basics
 • C++
 • OOP
 • Data Structure
-• Algorithm
+• Algorithms
+🔹 **تقييمات مستمرة طول فترة الدبلومة**
+ووفقًا لتقييم مستواك، ممكن تحصل على **Bonus يترجم لخصم** بيحدده الـInstructor ليك على دبلومة التخصص بعد كده.
+🔹 **LinkedIn Session**
+هتاخد Session مخصصة نساعدك فيها تبني Account احترافي على LinkedIn، وتعرف إزاي ترفع عليه المشاريع اللي بتعملها في الدبلومة
+🔹 *Soft Skills + Programs إضافية*
+**1️⃣ How To Be Ready?**
+هنتكلم عن إزاي تكون جاهز لسوق العمل، وتشتغل على مشاريع حقيقية، وتبني Portfolio، وتستفيد من LinkedIn وتكوّن شبكة علاقات تساعدك في الوصول لفرص شغل مستقبلًا.
+**2️⃣ Know Your Track**
+برنامج بيساعدك تتعرف على تخصصات البرمجة بشكل مباشر، وتفهم كل Track ومجالاته، عشان تقدر تحدد التخصص الأنسب ليك بناءً على ميولك وقدراتك.
 
-2️⃣ تقييمات بشكل مستمر طول فترة الدبلومة
-(وحسب التقييم ده الطالب بيحصل على بونص بيتترجم لخصم يحدده الإنستراكتور على دبلومة التخصص)
-
-3️⃣ سيشن LinkedIn
-بنعرف فيها إزاي نبني أكونت ونرفع عليه كل المشاريع اللي بنعملها في الدبلومة، بحيث يتم تجهيزك لسوق العمل بشكل تدريجي واحترافي
-
-4️⃣ برنامجين Soft Skills
-• How to be ready?
-إزاي تبقى جاهز لسوق العمل وتشتغل على مشاريع حقيقية، وترفع مشاريعك على LinkedIn، ونساعدك تبني شبكة علاقات تسهّل عليك الحصول على فرص عمل بعد كده.
-• Know your track
-برنامج بيعرّفك على التخصصات بشكل مباشر، ونساعدك تتعرف على كل تخصص بتفاصيله وتقدر تحدد التخصص المناسب ليك.
-
-5️⃣ الـ IMPACT عبارة عن 3 سيشنز Soft Skills
-1- CV, Portfolio
-2- Presentation Skills & Communication Skills
-3- LinkedIn Session
-
-🔗 لينك الدبلومة:
+⭐واسأل عن **Golden Guarantee** 
+ 
+🔗 *لينك الدبلومة:*
 https://eraapro.com/cs-8`
   },
   {
     id: "da", name: "Data Analysis", category: "data", icon: "bi-bar-chart-line",
     url: "https://eraapro.com/datamindset", keywords: "da داتا تحليل بيانات data mindset",
-    weeks: 16, hours: 120, projects: 4, tasks: 16
+    weeks: 16, hours: 127, projects: 4, tasks: 16
   },
   {
     id: "ai", name: "AI", category: "ai", icon: "bi-robot",
     url: "https://eraapro.com/ai", keywords: "ذكاء اصطناعي machine learning ai",
-    weeks: 32, hours: 210, projects: 10, tasks: 30
+    weeks: 28, hours: 210, projects: 10, tasks: 30
   },
   {
     id: "cyber", name: "Cyber Security", category: "security", icon: "bi-shield-lock",
     url: "https://eraapro.com/cybersecurity", keywords: "امن سيبراني سايبر سيكيورتي هاكنج",
-    weeks: null, hours: null, projects: null, tasks: null,
+    weeks: 16, hours: 127, projects: 4, tasks: 16,
     facts: [
-      { icon: "bi-calendar3", text: "6 شهور" },
-      { icon: "bi-translate", text: "محتاج مستوى إنجليزي كويس" }
+      { icon: "bi-calendar3", text: "16 اسبوع" },
+      { icon: "", text: "127 ساعة" },
+      { icon: "", text: "4 مشاريع" },
+      { icon: "bi-translate", text: "محتاج مستوى الأنجليزي يكون كويس" }
     ],
-    duration: "6 شهور",
+    duration: "16 اسبوع",
     notes: [" الإنجليزي: لازم يكون مستواك كويس فيه"]
   },
   {
     id: "uiux", name: "UI/UX", category: "design", icon: "bi-vector-pen",
     url: "https://eraapro.com/uiux", keywords: "تصميم واجهات ui ux يو اي يو اكس figma فيجما",
-    weeks: 12, hours: 90, projects: 3, tasks: 12
+    weeks: 12, hours: 87, projects: 2, tasks: 12
   }
 ];
 
-/* --------- لرسالة التلقائية للدبلومات  ---------- */
+/* --------- الرسالة التلقائية للدبلومات  ---------- */
 window.buildMessage = function (d) {
   if (d.message) return d.message;
   const lines = [`دبلومة ${d.name} `, ""];
@@ -123,10 +117,15 @@ window.buildMessage = function (d) {
   (d.notes || []).forEach(n => lines.push(n));
   lines.push(
     "",
-    " الـ IMPACT عبارة عن 3 سيشنز Soft Skills",
-    "1- CV, Portfolio",
-    "2- Presentation Skills & Communication Skills",
-    "3- LinkedIn Session",
+    "الـ IMPACT عبارة عن برنامج متكامل لمهارات سوق العمل",
+    "1- Freelancing ",
+    "2- CV (ATS) & Portfolio",
+    "3- Presentation Skills & Communication Skills",
+    "4- LinkedIn Session & Personal Branding",
+    "5- Interview Skills",
+    "6- Freelancing & How to Sell Your Service",
+    "7- Business English",
+    
     "",
     "🔗 لينك الدبلومة:",
     d.url
@@ -198,23 +197,23 @@ window.FEEDBACK = {
     { diploma: "Front End", src: "assets/feedback/front//WhatsApp Image 2026-09-21 at 9.13.21 PM (3).jpeg" },
   ],
 
-videos: [
-  { diploma: "flutter", title: "فيدباك طالب Flutter", url: "https://drive.google.com/file/d/1UQCO_YWiXB_NKq4j14AerhWuvSXWKu6i/view?usp=drive_link" },
-  { diploma: "flutter", title: "فيدباك طالب Flutter", url: "https://drive.google.com/file/d/1sgxsa2U7pd_nx9o-9pLBp61gU546vN7g/view?usp=drive_link" },
-  { diploma: ".net", title: "فيدباك طالب .Net", url: "https://drive.google.com/file/d/1E11UrJvqsD9BYyiXkHxjmeG2iy-yz7Nf/view?usp=drive_link" },
-  { diploma: ".net", title: "فيدباك طالب .Net", url: "https://drive.google.com/file/d/1JTYxwaHr-FF_9CoCxP_WGuJvEtlRV2ZP/view?usp=drive_link" },
-  { diploma: "front end ", title: "فيدباك طالب Front end", url: "https://drive.google.com/file/d/11akwOQagsomR84zEPYuQ6OFByUuJt7Lt/view?usp=drive_link" },
-  { diploma: "front end ", title: "فيدباك طالب Front end", url: "https://drive.google.com/file/d/1-UUXc-iJAT7RzkfirtN6vBKlTyofJwiI/view?usp=drive_link" },
-  { diploma: "uiux ", title: "فيدباك طالب UIUX", url: "https://drive.google.com/file/d/12z-EDeWygY9J18Es9TuwMkYHoo_t2Bko/view?usp=drive_link" },
-  { diploma: "uiux ", title: "فيدباك طالب UIUX", url: "https://drive.google.com/file/d/1g-BYcnTJKtmcKKq2XCglY-I0UrrfNY74/view?usp=drive_link" },
-  { diploma: "data analysis ", title: "فيدباك طالب Data analysis", url: "https://drive.google.com/file/d/1Awhs1FShUMO6DGxZ_KjYlAkSNxWjdQhF/view?usp=drive_link" },
-  { diploma: "data analysis ", title: "فيدباك طالب Data analysis", url: "https://drive.google.com/file/d/1z9jEToA1xTtFTtJthBAWnAyS1-3h1dBE/view?usp=drive_link" },
-  { diploma: "php ", title: "فيدباك طالب PHP", url: "https://drive.google.com/file/d/1zxdx_qdO2BcRCXleeQI54kg3FCTw5s0h/view?usp=drive_link" },
-  { diploma: "php ", title: "فيدباك طالب PHP", url: "https://drive.google.com/file/d/1b22k3c_AU2YVI30oxjg7xz_baHxEXmyo/view?usp=drive_link" },
-  { diploma: "java ", title: "فيدباك طالب JAVA", url: "https://drive.google.com/file/d/1K9G8UUiAaQcNych58lH_wr20wcdo91bq/view?usp=drive_link" },
-  { diploma: "ai", title: "فيدباك طالب AI", url: "https://drive.google.com/file/d/1KWcIEk3lFBXA65wpTUl1ziQuwN520DZE/view?usp=drive_link" }, 
-  { diploma: "CS8", title: "فيدباك طالب CS8", url: "https://drive.google.com/file/d/1v6JG7dKrqvoXmz96OB4KROsRs9-gVOh3/view?usp=drive_link" } 
-]
+  videos: [
+    { diploma: "flutter", title: "فيدباك طالب Flutter", url: "https://drive.google.com/file/d/1UQCO_YWiXB_NKq4j14AerhWuvSXWKu6i/view?usp=drive_link " },
+    { diploma: "flutter", title: "فيدباك طالب Flutter", url: "https://drive.google.com/file/d/1sgxsa2U7pd_nx9o-9pLBp61gU546vN7g/view?usp=drive_link" },
+    { diploma: ".net", title: "فيدباك طالب .Net", url: "https://drive.google.com/file/d/1E11UrJvqsD9BYyiXkHxjmeG2iy-yz7Nf/view?usp=drive_link" },
+    { diploma: ".net", title: "فيدباك طالب .Net", url: "https://drive.google.com/file/d/1JTYxwaHr-FF_9CoCxP_WGuJvEtlRV2ZP/view?usp=drive_link" },
+    { diploma: "front end ", title: "فيدباك طالب Front end", url: "https://drive.google.com/file/d/11akwOQagsomR84zEPYuQ6OFByUuJt7Lt/view?usp=drive_link" },
+    { diploma: "front end ", title: "فيدباك طالب Front end", url: "https://drive.google.com/file/d/1-UUXc-iJAT7RzkfirtN6vBKlTyofJwiI/view?usp=drive_link" },
+    { diploma: "uiux ", title: "فيدباك طالب UIUX", url: "https://drive.google.com/file/d/12z-EDeWygY9J18Es9TuwMkYHoo_t2Bko/view?usp=drive_link" },
+    { diploma: "uiux ", title: "فيدباك طالب UIUX", url: "https://drive.google.com/file/d/1g-BYcnTJKtmcKKq2XCglY-I0UrrfNY74/view?usp=drive_link" },
+    { diploma: "data analysis ", title: "فيدباك طالب Data analysis", url: "https://drive.google.com/file/d/1Awhs1FShUMO6DGxZ_KjYlAkSNxWjdQhF/view?usp=drive_link" },
+    { diploma: "data analysis ", title: "فيدباك طالب Data analysis", url: "https://drive.google.com/file/d/1z9jEToA1xTtFTtJthBAWnAyS1-3h1dBE/view?usp=drive_link" },
+    { diploma: "php ", title: "فيدباك طالب PHP", url: "https://drive.google.com/file/d/1zxdx_qdO2BcRCXleeQI54kg3FCTw5s0h/view?usp=drive_link" },
+    { diploma: "php ", title: "فيدباك طالب PHP", url: "https://drive.google.com/file/d/1b22k3c_AU2YVI30oxjg7xz_baHxEXmyo/view?usp=drive_link" },
+    { diploma: "java ", title: "فيدباك طالب JAVA", url: "https://drive.google.com/file/d/1K9G8UUiAaQcNych58lH_wr20wcdo91bq/view?usp=drive_link" },
+    { diploma: "ai", title: "فيدباك طالب AI", url: "https://drive.google.com/file/d/1KWcIEk3lFBXA65wpTUl1ziQuwN520DZE/view?usp=drive_link" },
+    { diploma: "CS8", title: "فيدباك طالب CS8", url: "https://drive.google.com/file/d/1v6JG7dKrqvoXmz96OB4KROsRs9-gVOh3/view?usp=drive_link" }
+  ]
 };
 
 /* ---- أول سيشن + الإنستراكتور -----*/
@@ -236,33 +235,10 @@ window.SESSIONS = {
 /* ---------- الفروع ----------*/
 window.BRANCHES = [
   {
-    id: "dokki", name: "فرع الدقي", icon: "bi-building-fill",
-    address: "5 شارع مصدق، الدقي", floor: "الدور الثالث",
-    mapUrl: "https://maps.app.goo.gl/xUcbeTQoMcUY8wMEA"
-  },
-  {
-    id: "abbas", name: "فرع مدينة نصر ", icon: "bi-geo-alt-fill",
-    address: "عمارة 4 شارع عماد الدين كامل أول عباس العقاد، بجوار كشري التحرير أعلى مطعم الحاتي",
-    floor: "الدور السادس",
-    mapUrl: "https://maps.app.goo.gl/uq1kAU6kxqszKZMp6"
-  },
-  {
-    id: "alex", name: "فرع الإسكندرية", icon: "bi-geo-alt-fill", place: "O Space",
-    address: "لوران، شارع أبوقير، عمارة بي تك، قبل شارع شعراوي",
-    floor: "الدور الأول",
-    mapUrl: "https://goo.gl/maps/Lwg6f1vCVkRbGp7aA"
-  }
-];
-
-
-
-/* ---------- الفروع ----------*/
-window.BRANCHES = [
-  {
-    id: "dokki", 
-    name: "فرع الدقي", 
+    id: "dokki",
+    name: "فرع الدقي",
     icon: "bi-building-fill",
-    address: "5 شارع مصدق، الدقي", 
+    address: "5 شارع مصدق، الدقي",
     floor: "الدور الثالث",
     mapUrl: "https://maps.app.goo.gl/xUcbeTQoMcUY8wMEA",
     images: [
@@ -275,8 +251,8 @@ window.BRANCHES = [
     ]
   },
   {
-    id: "abbas", 
-    name: "فرع مدينة نصر ", 
+    id: "abbas",
+    name: "فرع مدينة نصر ",
     icon: "bi-geo-alt-fill",
     address: "عمارة 4 شارع عماد الدين كامل أول عباس العقاد، بجوار كشري التحرير أعلى مطعم الحاتي",
     floor: "الدور السادس",
@@ -290,9 +266,9 @@ window.BRANCHES = [
     ]
   },
   {
-    id: "alex", 
-    name: "فرع الإسكندرية", 
-    icon: "bi-geo-alt-fill", 
+    id: "alex",
+    name: "فرع الإسكندرية",
+    icon: "bi-geo-alt-fill",
     place: "O Space",
     address: "لوران، شارع أبوقير، عمارة بي تك، قبل شارع شعراوي",
     floor: "الدور الأول",
