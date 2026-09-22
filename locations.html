@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الفروع | EraaSoft Sales Hub</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/vendor/animate.min.css">
+  <link rel="stylesheet" href="assets/vendor/aos.css">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="locations">
+
+  <div id="site-nav"></div>
+
+  <header class="eh-hero eh-hero--sm on-dark">
+    <div class="container">
+      <h1 class="animate__animated animate__fadeInUp">فروعنا</h1>
+      <p class="lead animate__animated animate__fadeInUp" style="animation-delay:.12s">
+        صلي علي النبي ونت شغال عشان ربنا يكرمك
+      </p>
+    </div>
+  </header>
+
+  <main class="container py-4 py-lg-5">
+    <div class="row g-3 g-lg-4" id="grid">
+      <div class="load-note" style="padding:16px;border:1px dashed #999;border-radius:10px;background:#fff;color:#444;line-height:1.9">
+        جاري تحميل الفروع...
+      </div>
+    </div>
+  </main>
+
+  <!-- عارض صور الفرع (Lightbox Modal) -->
+  <div class="modal fade" id="lightbox" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 rounded-4 overflow-hidden">
+        <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center p-3">
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-primary px-3 py-2 rounded-pill" id="lbTag">اسم الفرع</span>
+            <span class="text-muted small fw-bold" id="lbCount">1 / 1</span>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center p-3 position-relative" id="lbStage" style="background:#f8f9fa;">
+          <img id="lbImg" src="" class="img-fluid rounded-3 shadow-sm" alt="صورة الفرع" style="max-height: 70vh; object-fit: contain;">
+        </div>
+        <div class="modal-footer border-0 pt-2 p-3 d-flex justify-content-between align-items-center">
+          <div class="btn-group dir-ltr">
+            <button type="button" class="btn btn-outline-secondary btn-sm px-3" id="lbPrev"><i class="bi bi-chevron-right"></i> السابق</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm px-3" id="lbNext">التالي <i class="bi bi-chevron-left"></i></button>
+          </div>
+          <!-- زر تحميل ملف ZIP لكل الصور -->
+          <button type="button" class="btn btn-eh btn-sm px-3 d-inline-flex align-items-center gap-1" id="lbDownload">
+            <i class="bi bi-file-earmark-zip-fill"></i> تنزيل كل الصور (ZIP)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/vendor/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <!-- مكتبة ضغط الملفات JSZip -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="js/locations.js"></script>
+
+</body>
+</html>

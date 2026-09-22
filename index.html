@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الدبلومات | EraaSoft Sales Hub</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/vendor/animate.min.css">
+  <link rel="stylesheet" href="assets/vendor/aos.css">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="diplomas">
+
+  <div id="site-nav"></div>
+
+  <header class="eh-hero on-dark">
+    <div class="container">
+      <h1 class="animate__animated animate__fadeInUp">اختار الدبلومة وابعتها للعميل في ضغطة</h1>
+      <p class="lead animate__animated animate__fadeInUp" style="animation-delay:.12s">
+       صلي علي النبي ونت شغال عشان ربنا يكرمك 
+      </p>
+      <div class="search-wrap animate__animated animate__fadeInUp" style="animation-delay:.24s">
+        <i class="bi bi-search" aria-hidden="true"></i>
+        <input id="dipSearch" type="search" class="form-control" autocomplete="off"
+               placeholder="دور على دبلومة…    " aria-label="بحث عن دبلومة">
+      </div>
+    </div>
+  </header>
+
+  <main class="container py-4 py-lg-5">
+    <div class="toolbar">
+      <div class="chips" id="chips" role="group" aria-label="فلترة حسب الدبلومة"></div>
+      <span class="result-count" id="resultCount" aria-live="polite"></span>
+    </div>
+
+    <div class="row g-3 g-lg-4" id="dipGrid"><div class="load-note" style="padding:16px;border:1px dashed #999;border-radius:10px;background:#fff;color:#444;line-height:1.9">لو مش شايف الكروت: اتأكد إنك <b>فكيت ضغط الفولدر كامل</b> (مش فاتح الملف من جوه الـ zip)، وبعدين افتح الملف من جوه الفولدر. ولو المتصفح مقفّل JavaScript شغّله.</div></div>
+
+    <div class="empty" id="emptyState" hidden>
+      <i class="bi bi-search"></i>
+      <h2>مفيش دبلومة بالاسم ده</h2>
+      <p>جرّب كلمة تانية أو اختار "الكل".</p>
+    </div>
+  </main>
+
+  <!-- معاينة الرسالة -->
+  <div class="modal fade" id="msgModal" tabindex="-1" aria-labelledby="msgModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="msgModalTitle"></h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+        </div>
+        <div class="modal-body">
+          <div class="msg-box" id="msgBox"></div>
+        </div>
+        <div class="modal-footer justify-content-start gap-2">
+          <button type="button" class="btn-eh" id="msgCopy"><i class="bi bi-clipboard2"></i><span>نسخ الرسالة</span></button>
+          <button type="button" class="btn-eh btn-eh--ghost" id="msgCopyLink"><i class="bi bi-link-45deg"></i><span>نسخ اللينك</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/vendor/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/diplomas.js"></script>
+</body>
+</html>
