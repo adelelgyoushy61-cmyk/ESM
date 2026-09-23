@@ -277,3 +277,38 @@ window.BRANCHES = [
     ]
   }
 ];
+
+
+
+ 
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(() => {
+        const navbarBrand = document.querySelector("#site-nav .navbar-brand");
+        const template = document.getElementById("theme-toggle-template");
+
+        if (navbarBrand && template) {
+          const toggleNode = template.content.cloneNode(true);
+          navbarBrand.parentNode.insertBefore(toggleNode, navbarBrand.nextSibling);
+
+          // إعطاء أمرين الضغط والتغيير
+          const toggleBtn = document.getElementById("theme-toggle");
+          toggleBtn.addEventListener("click", () => {
+            let isDark = document.documentElement.getAttribute("data-theme") === "dark";
+            if (isDark) {
+              document.documentElement.removeAttribute("data-theme");
+              localStorage.setItem("theme", "light");
+            } else {
+              document.documentElement.setAttribute("data-theme", "dark");
+              localStorage.setItem("theme", "dark");
+            }
+          });
+        }
+      }, 100);
+    });
+  
+   
+    const savedTheme = localStorage.getItem('theme') || 
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
