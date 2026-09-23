@@ -39,10 +39,10 @@
         </ul>
         <div class="dip-actions">
           <button class="btn-eh" type="button" data-act="copy-msg" data-id="${d.id}">
-            <i class="bi bi-clipboard2"></i><span> نسخ الرسالة كامله </span>
+            <i class="bi bi-clipboard2"></i><span> نسخ رسالة المحتوي </span>
           </button>
           <button class="btn-eh btn-eh--ghost" type="button" data-act="copy-link" data-id="${d.id}">
-            <i class="bi bi-link-45deg"></i><span> نسخ اللينك فقط </span>
+            <i class="bi bi-link-45deg"></i><span> لينك المحتوي </span>
           </button>
         </div>
         <div class="dip-foot">
