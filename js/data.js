@@ -113,19 +113,18 @@ window.buildMessage = function (d) {
   if (d.weeks && d.hours) lines.push(` المدة وساعات التدريب: ${d.weeks} أسبوع / ${d.hours} ساعة`);
   else if (d.duration) lines.push(` مدة الدبلومة: ${d.duration}`);
   if (d.tasks) lines.push(` التطبيقات العملية: ${d.tasks} تطبيق عملي وتكليف`);
-  if (d.projects) lines.push(" تطبيق عملي مع المتابعة من المينتور خلال فترة الدبلومة");
+  if (d.projects) lines.push(" تطبيق عملي مع متابعة من  خلال الـمنتور  فترة الدبلومة");
   (d.notes || []).forEach(n => lines.push(n));
   lines.push(
     "",
-    "الـ IMPACT عبارة عن برنامج متكامل لمهارات سوق العمل",
-    "1- Freelancing ",
-    "2- CV (ATS) & Portfolio",
-    "3- Presentation Skills & Communication Skills",
-    "4- LinkedIn Session & Personal Branding",
-    "5- Interview Skills",
-    "6- Freelancing & How to Sell Your Service",
-    "7- Business English",
-    
+    "IMPACT – مهارات سوق العمل",
+    "1- •  Freelancing:  تعرف تبدأ Freelancing وتبيع خدمتك. ",
+    "2- •  CV (ATS) & Portfolio:  تعرف تعمل CV مناسب للـATS وتعرض شغلك بشكل احترافي. ",
+    "3- * LinkedIn & Personal Branding:   تعرف تقدم نفسك وتبني الـPersonal Brand بتاعك. ",
+    "4- * Presentation & Communication Skills:  تعرف تعرض شغلك وتتواصل بشكل أفضل. ",
+    "5- * Interview Skills: تتعلم إزاي تقدم نفسك وتتعامل مع الـInterviews. ",
+    "6- * Business English: تطور الـEnglish اللي محتاجه في بيئة العمل.",
+   
     "",
     "🔗 لينك الدبلومة:",
     d.url
