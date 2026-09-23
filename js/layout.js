@@ -7,7 +7,7 @@ const NAV = [
   { id: "feedback", href: "feedback.html", label: "الفيدباكس", icon: "bi-chat-heart-fill" },
   { id: "sessions", href: "sessions.html", label: "أول سيشن والإنستراكتورز", icon: "bi-play-circle-fill" },
   { id: "locations", href: "locations.html", label: "الفروع", icon: "bi-geo-alt-fill" },
-  { id: "sales-info", href: "sales-info.html", label: "معلومات المبيعات", icon: "bi-receipt-cutoff" }
+  { id: "sales-info", href: "sales-info.html", label: "sales info", icon: "bi-receipt-cutoff" }
 ];
 
   const navHost = document.getElementById("site-nav");
