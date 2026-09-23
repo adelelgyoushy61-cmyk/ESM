@@ -112,18 +112,18 @@ window.buildMessage = function (d) {
   if (d.projects) lines.push(` ${d.projects} مشاريع عملية خلال الدورة`);
   if (d.weeks && d.hours) lines.push(` المدة وساعات التدريب: ${d.weeks} أسبوع / ${d.hours} ساعة`);
   else if (d.duration) lines.push(` مدة الدبلومة: ${d.duration}`);
-  if (d.tasks) lines.push(` التطبيقات العملية: ${d.tasks} تطبيق عملي وتكليف`);
-  if (d.projects) lines.push(" تطبيق عملي مع متابعة من  خلال الـمنتور  فترة الدبلومة");
+  // if (d.tasks) lines.push(`  : ${d.tasks}   `);
+  if (d.projects) lines.push(" تطبيق عملي مع متابعة من الـمنتور بشكل اسبوعي خلال فترة الدبلومة");
   (d.notes || []).forEach(n => lines.push(n));
   lines.push(
     "",
-    "IMPACT – مهارات سوق العمل",
-    "1- •  Freelancing:  تعرف تبدأ Freelancing وتبيع خدمتك. ",
-    "2- •  CV (ATS) & Portfolio:  تعرف تعمل CV مناسب للـATS وتعرض شغلك بشكل احترافي. ",
-    "3- * LinkedIn & Personal Branding:   تعرف تقدم نفسك وتبني الـPersonal Brand بتاعك. ",
-    "4- * Presentation & Communication Skills:  تعرف تعرض شغلك وتتواصل بشكل أفضل. ",
-    "5- * Interview Skills: تتعلم إزاي تقدم نفسك وتتعامل مع الـInterviews. ",
-    "6- * Business English: تطور الـEnglish اللي محتاجه في بيئة العمل.",
+    " EraaSoft Impact – مهارات سوق العمل ",
+    "1- Freelancing:  تعرف تبدأ Freelancing وتبيع خدمتك. ",
+    "2- CV (ATS) & Portfolio:  تعرف تعمل CV مناسب للـATS وتعرض شغلك بشكل احترافي. ",
+    "3- LinkedIn & Personal Branding:   تعرف تقدم نفسك وتبني الـPersonal Brand بتاعك. ",
+    "4- Presentation & Communication Skills:  تعرف تعرض شغلك وتتواصل بشكل أفضل. ",
+    "5- Interview Skills: تتعلم إزاي تقدم نفسك وتتعامل مع الـInterviews. ",
+    "6- Business English: تطور الـEnglish اللي محتاجه في بيئة العمل.",
    
     "",
     "🔗 لينك الدبلومة:",
