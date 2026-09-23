@@ -278,15 +278,14 @@ window.BRANCHES = [
   }
 ];
 
-
-
- 
     document.addEventListener("DOMContentLoaded", function () {
+      // الانتظار لحين تحميل الناف بار من layout.js
       setTimeout(() => {
         const navbarBrand = document.querySelector("#site-nav .navbar-brand");
         const template = document.getElementById("theme-toggle-template");
 
         if (navbarBrand && template) {
+          // إضافة الزرار بجانب اللوجو مباشرة
           const toggleNode = template.content.cloneNode(true);
           navbarBrand.parentNode.insertBefore(toggleNode, navbarBrand.nextSibling);
 
@@ -307,8 +306,144 @@ window.BRANCHES = [
     });
   
    
+    // تفعيل الـ Theme المحفوظ فوراً لتجنب الـ Flickering عند التحميل
     const savedTheme = localStorage.getItem('theme') || 
       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     if (savedTheme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+
+    /* ---------- بيانات ورسائل المبيعات (Sales Info) ---------- */
+window.SALES_INFO = {
+  fingerprintPass: "Mmm123@#$m",
+  paymentMessages: [
+    {
+      id: "account1",
+      title: "رسالة التحويل (الحساب الأول)",
+      subtitle: "فودافون كاش / انستاباي",
+      wallet: "01000143085",
+      instapay: "01027285688",
+      rulesUrl: "https://cutt.ly/ht2OyEbt",
+      text: `*دى قواعد الدبلومة ، هستأذنك تقرأها قبل التحويل https://cutt.ly/ht2OyEbt*
+
+محفظة الكترونية / Wallet علي الرقم 01000143085
+او من خلال انستاباي / Instapay على الرقم 01027285688
+
+وهنتظر من حضرتك بعد التحويل:
+
+💻 صورة التحويل 
+💻 الرقم اللى اتحول منه
+💻 الاسم ثلاثى 
+💻 ال Gmail 
+💻 حضرتك طالب ولا خريج ؟
+💻 هتحضر اونلاين ولا اوفلاين ؟
+💻 جامعه ايه؟
+💻 كليه ايه ؟`
+    },
+    {
+      id: "account2",
+      title: "رسالة التحويل (الحساب الثاني)",
+      subtitle: "فودافون كاش / انستاباي",
+      wallet: "01044880209",
+      instapay: "01129913325",
+      rulesUrl: "https://cutt.ly/ht2OyEbt",
+      text: `*دى قواعد الدبلومة ، هستأذنك تقرأها قبل التحويل https://cutt.ly/ht2OyEbt*
+
+محفظة الكترونية / Wallet علي الرقم 01044880209
+او من خلال انستاباي / Instapay على الرقم 01129913325
+
+وهنتظر من حضرتك بعد التحويل:
+
+💻 صورة التحويل 
+💻 الرقم اللى اتحول منه
+💻 الاسم ثلاثى 
+💻 ال Gmail 
+💻 حضرتك طالب ولا خريج ؟
+💻 هتحضر اونلاين ولا اوفلاين ؟
+💻 جامعه ايه؟
+💻 كليه ايه ؟`
+    }
+  ]
+};
+
+
+
+   document.addEventListener("DOMContentLoaded", function () {
+      const salesContainer = document.getElementById("salesContent");
+      
+      if (!window.SALES_INFO) return;
+
+      let html = '';
+
+      // 1. إضافة بطاقة باسورد البصمة
+      if (window.SALES_INFO.fingerprintPass) {
+        html += `
+          <div class="col-12" data-aos="fade-up">
+            <div class="dip-card">
+              <div class="dip-head">
+                <div class="dip-icon"><i class="bi bi-fingerprint"></i></div>
+                <div>
+                  <h3 class="dip-name">باسورد تطبيق البصمة</h3>
+                  <p class="dip-cat">بيانات الدخول السريعة</p>
+                </div>
+              </div>
+              <div class="msg-box mb-3" id="passText" style="font-family: monospace; font-size: 1.1rem; font-weight: bold; min-height: auto;">${window.SALES_INFO.fingerprintPass}</div>
+              <div class="dip-actions" style="grid-template-columns: 1fr;">
+                <button type="button" class="btn-eh" onclick="copySalesText('passText', this)">
+                  <i class="bi bi-clipboard"></i><span>نسخ الباسورد</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // 2. إضافة رسائل التحويل والرموز
+      if (window.SALES_INFO.paymentMessages && window.SALES_INFO.paymentMessages.length > 0) {
+        window.SALES_INFO.paymentMessages.forEach((msg, index) => {
+          html += `
+            <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-delay="${(index + 1) * 100}">
+              <div class="dip-card">
+                <div class="dip-head">
+                  <div class="dip-icon"><i class="bi bi-wallet2"></i></div>
+                  <div>
+                    <h3 class="dip-name">${msg.title}</h3>
+                    <p class="dip-cat">${msg.subtitle}</p>
+                  </div>
+                </div>
+                <div class="msg-box mb-3" id="${msg.id}">${msg.text}</div>
+                <div class="dip-actions" style="grid-template-columns: 1fr;">
+                  <button type="button" class="btn-eh" onclick="copySalesText('${msg.id}', this)">
+                    <i class="bi bi-clipboard2"></i><span>نسخ الرسالة بالكامل</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      }
+
+      salesContainer.innerHTML = html;
+
+      // تهيئة AOS بعد إضافة العناصر
+      if (typeof AOS !== 'undefined') {
+        AOS.init({ duration: 600, once: true });
+      }
+    });
+
+    // وظيفة النسخ
+    function copySalesText(elementId, btn) {
+      const text = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const span = btn.querySelector('span');
+        const originalText = span.innerText;
+        span.innerText = 'تم النسخ بنجاح!';
+        btn.classList.add('is-copied');
+        
+        setTimeout(() => {
+          span.innerText = originalText;
+          btn.classList.remove('is-copied');
+        }, 2000);
+      });
     }
