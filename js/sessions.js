@@ -45,7 +45,7 @@
         <div class="ses-instr">
           <span class="avatar" aria-hidden="true">${avatar}</span>
           <div>
-            <p class="ses-instr-name ${has ? "" : "is-empty"}">${has ? esc(s.instructor) : "اسم الإنستراكتور لسه هيتضاف"}</p>
+            <p class="ses-instr-name ${has ? "" : "is-empty"}">${has ? esc(s.instructor) : "اسم الإنستراكتور "}</p>
             <p class="ses-instr-role">إنستراكتور الدبلومة</p>
           </div>
         </div>
