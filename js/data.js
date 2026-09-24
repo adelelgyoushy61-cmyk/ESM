@@ -132,6 +132,7 @@ window.buildMessage = function (d) {
   return lines.join("\n");
 };
 
+
 /* ---------- الفيدباكس ----------*/
 window.FEEDBACK = {
   images: [
@@ -314,7 +315,7 @@ window.BRANCHES = [
     }
 
 
-    /* ---------- بيانات ورسائل المبيعات (Sales Info) ---------- */
+    /* ---------- ارقام التحويل الخاصه بالحجز ---------- */
 window.SALES_INFO = {
   fingerprintPass: "Mmm123@#$m",
   paymentMessages: [
@@ -447,3 +448,36 @@ window.SALES_INFO = {
         }, 2000);
       });
     }
+
+    // Social media  //
+
+    /* ---------- بيانات رسالة السوشيال ميديا ---------- */
+window.SOCIAL_MEDIA_TEXT = `Eraa-social media
+
+🔹 الموقع الرسمي:
+🌐 https://www.eraasoft.com
+🔹 فيسبوك:
+📘 https://facebook.com/eraasoft
+🔹 جروب الفيسبوك (مجتمع المتعلمين):
+👥 https://facebook.com/groups/2128494490777624
+🔹 انستجرام:
+📸 https://instagram.com/eraasoft1
+🔹 قناة واتساب:
+💬 https://whatsapp.com/channel/0029VatAmJmBadmhpf2zZb47
+🔹 تليجرام:
+📢 https://t.me/et3lembarmagah
+🔹 يوتيوب:
+▶️ https://youtube.com/@eraasoft
+🔹 لينكد إن:
+💼 https://linkedin.com/company/eraasoft/posts`;
+
+window.SOCIAL_MEDIA_LINKS = [
+  { name: "الموقع الرسمي", url: "https://www.eraasoft.com", icon: "bi-globe", color: "#0d6efd" },
+  { name: "صفحة فيسبوك", url: "https://facebook.com/eraasoft", icon: "bi-facebook", color: "#1877f2" },
+  { name: "جروب الفيسبوك (مجتمع المتعلمين)", url: "https://facebook.com/groups/2128494490777624", icon: "bi-people-fill", color: "#1877f2" },
+  { name: "انستجرام", url: "https://instagram.com/eraasoft1", icon: "bi-instagram", color: "#e4405f" },
+  { name: "قناة واتساب", url: "https://whatsapp.com/channel/0029VatAmJmBadmhpf2zZb47", icon: "bi-whatsapp", color: "#25d366" },
+  { name: "تليجرام", url: "https://t.me/et3lembarmagah", icon: "bi-telegram", color: "#24a1de" },
+  { name: "يوتيوب", url: "https://youtube.com/@eraasoft", icon: "bi-youtube", color: "#ff0000" },
+  { name: "لينكد إن", url: "https://linkedin.com/company/eraasoft/posts", icon: "bi-linkedin", color: "#0a66c2" }
+];
