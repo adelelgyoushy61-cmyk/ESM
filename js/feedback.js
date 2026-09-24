@@ -87,11 +87,17 @@
   function shotHTML(x, i) {
     return `
     <div class="col-6 col-md-4 col-lg-3" ${window.EraaUI ? EraaUI.aos((i % 4) * 60) : ''}>
-      <button type="button" class="shot" data-open="${i}" aria-label="تكبير الصورة: ${esc(dipName(x.diploma))}">
-        <img src="${esc(x.src)}" alt="${esc(x.alt)}" loading="lazy" decoding="async">
-        <span class="shot-zoom" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span>
-        <span class="shot-tag">${esc(dipName(x.diploma))}</span>
-      </button>
+      <div class="d-flex flex-column gap-2 h-100">
+        <button type="button" class="shot" data-open="${i}" aria-label="تكبير الصورة: ${esc(dipName(x.diploma))}">
+          <img src="${esc(x.src)}" alt="${esc(x.alt)}" loading="lazy" decoding="async">
+          <span class="shot-zoom" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span>
+          <span class="shot-tag">${esc(dipName(x.diploma))}</span>
+        </button>
+        <button type="button" class="btn-eh btn-eh--ghost btn-eh--sm w-100" data-copylink="${i}"
+                aria-label="نسخ لينك صورة فيدباك ${esc(dipName(x.diploma))}">
+          <i class="bi bi-link-45deg"></i><span>نسخ اللينك</span>
+        </button>
+      </div>
     </div>`;
   }
 
@@ -124,22 +130,24 @@
 
     renderChips();
 
+   
     const list = filtered();
     grid.innerHTML = list.map(state.tab === "images" ? shotHTML : vidHTML).join("");
-
+ 
     countEl.textContent = list.length ? `${list.length} ${state.tab === "images" ? "صورة" : "فيديو"}` : "";
-
+ 
     const none = currentItems().length === 0 || list.length === 0;
     emptyEl.hidden = !none;
     if (none) {
       emptyEl.querySelector("h2").textContent = state.tab === "videos" ? "لسه مفيش فيديوهات هنا" : "لسه مفيش صور هنا";
       emptyEl.querySelector("p").textContent = "أول ما يتضاف محتوى هيظهر في الصفحة دي.";
     }
-
+ 
     if (window.EraaUI && typeof EraaUI.refreshAOS === "function") {
       EraaUI.refreshAOS();
     }
   }
+
 
   /* ---------- الأحداث ---------- */
   document.querySelector(".seg").addEventListener("click", e => {
@@ -148,37 +156,54 @@
     state.tab = b.dataset.tab;
     render();
   });
-
+ 
   chipsEl.addEventListener("click", e => {
     const b = e.target.closest("[data-dip]");
     if (!b) return;
     setCurrentDip(b.dataset.dip);
     render();
   });
-
+ 
   /* ---------- عارض الصور (Lightbox) ---------- */
   const lbEl = document.getElementById("lightbox");
   let lbModal = null;
   const getLB = () => (lbModal = lbModal || (window.bootstrap ? new bootstrap.Modal(lbEl) : null));
   const lbImg = document.getElementById("lbImg");
   let list = [], idx = 0;
-
-  function showLB() {
-    const it = list[idx];
-    if (!it) return;
-    lbImg.src = it.src; lbImg.alt = it.alt;
-    document.getElementById("lbTag").textContent = dipName(it.diploma);
-    document.getElementById("lbCount").textContent = `${idx + 1} / ${list.length}`;
-    const dl = document.getElementById("lbDownload");
-    if (dl) {
-      dl.href = it.src;
-      dl.setAttribute("download", `eraasoft-feedback-${it.diploma}-${idx + 1}.jpg`);
-    }
-    [idx - 1, idx + 1].forEach(j => { if (list[j]) new Image().src = list[j].src; });
+ 
+  /* ---------- دالة تحويل الرابط لرابط كامل ---------- */
+  function absUrl(url) {
+    if (!url) return "";
+    if (url.startsWith("http://") || url.startsWith("https://")) return url;
+    return new URL(url, window.location.href).href;
   }
-  const step = d => { idx = (idx + d + list.length) % list.length; showLB(); };
 
   grid.addEventListener("click", e => {
+    const c = e.target.closest("[data-copylink]");
+    if (c) {
+      const it = filtered()[+c.dataset.copylink];
+      if (it) {
+        const link = absUrl(it.src);
+        if (window.EraaUI && typeof EraaUI.copyWithFeedback === "function") {
+          EraaUI.copyWithFeedback(c, link, `تم نسخ لينك صورة ${dipName(it.diploma)}`);
+        } else if (navigator.clipboard) {
+          navigator.clipboard.writeText(link).then(() => {
+            const span = c.querySelector("span");
+            if (span) {
+              const originalText = span.innerText;
+              span.innerText = "تم النسخ!";
+              c.classList.add("is-copied");
+              setTimeout(() => {
+                span.innerText = originalText;
+                c.classList.remove("is-copied");
+              }, 2000);
+            }
+          });
+        }
+      }
+      return;
+    }
+
     const o = e.target.closest("[data-open]");
     if (o) {
       list = filtered();
@@ -190,19 +215,19 @@
     const p = e.target.closest("[data-play]");
     if (p) openVideo(filtered()[+p.dataset.play]);
   });
-
-  const btnPrev = document.getElementById("lbPrev");
+ 
+   const btnPrev = document.getElementById("lbPrev");
   if (btnPrev) btnPrev.addEventListener("click", () => step(-1));
-
+ 
   const btnNext = document.getElementById("lbNext");
   if (btnNext) btnNext.addEventListener("click", () => step(1));
-
+ 
   document.addEventListener("keydown", e => {
     if (!lbEl || !lbEl.classList.contains("show")) return;
     if (e.key === "ArrowRight") step(-1);
     if (e.key === "ArrowLeft")  step(1);
   });
-
+ 
   let sx = null;
   const stage = document.getElementById("lbStage");
   if (stage) {
@@ -215,13 +240,14 @@
     });
   }
 
+ 
   /* ---------- مشغل الفيديو وتعيين التحميل ---------- */
   const vmEl = document.getElementById("videoModal");
   let vmModal = null;
   const getVM = () => (vmModal = vmModal || (window.bootstrap ? new bootstrap.Modal(vmEl) : null));
   const vmFrame = document.getElementById("vmFrame"); 
   const vmDownloadBtn = document.getElementById("vmDownloadBtn");
-
+ 
   function openVideo(v) {
     if (!v) return;
     document.getElementById("vmTitle").textContent = `${v.title || "فيدباك طالب"} — ${dipName(v.diploma)}`;
@@ -238,7 +264,7 @@
       f.title = v.title || "فيديو";
       vmFrame.appendChild(f);
     }
-
+ 
     // إعداد زر التحميل
     if (vmDownloadBtn) {
       if (v.download) {
@@ -256,14 +282,15 @@
         vmDownloadBtn.style.display = "none";
       }
     }
-
+ 
     const m = getVM();
     if (m) m.show(); else window.open(v.url, "_blank");
   }
-
+ 
   if (vmEl) {
     vmEl.addEventListener("hidden.bs.modal", () => { vmFrame.innerHTML = ""; });
   }
-
+ 
   render();
 })();
+ 
