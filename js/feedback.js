@@ -170,6 +170,32 @@
   const getLB = () => (lbModal = lbModal || (window.bootstrap ? new bootstrap.Modal(lbEl) : null));
   const lbImg = document.getElementById("lbImg");
   let list = [], idx = 0;
+
+  /* ---------- عرض الصورة الحالية داخل الـ Lightbox ---------- */
+  function showLB() {
+    const it = list[idx];
+    if (!it) return;
+
+    lbImg.src = it.src;
+    lbImg.alt = it.alt || "";
+
+    document.getElementById("lbTag").textContent = dipName(it.diploma);
+    document.getElementById("lbCount").textContent = `${idx + 1} / ${list.length}`;
+
+    const dl = document.getElementById("lbDownload");
+    if (dl) {
+      dl.href = it.src;
+      dl.setAttribute("download", `feedback-${it.diploma || "eraasoft"}-${idx + 1}`);
+    }
+  }
+
+  /* ---------- التنقل بين الصور (السابق / التالي) ---------- */
+  function step(dir) {
+    if (!list.length) return;
+    idx = (idx + dir + list.length) % list.length;
+    showLB();
+  }
+
  
   /* ---------- دالة تحويل الرابط لرابط كامل ---------- */
   function absUrl(url) {
