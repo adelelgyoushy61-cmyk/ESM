@@ -59,15 +59,16 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.SOCIAL_MEDIA_LINKS) {
         const linksList = window.SOCIAL_MEDIA_LINKS.map(item => `
           <div class="col-12 col-md-6">
-            <div class="d-flex align-items-center justify-content-between p-3 rounded social-item-card js-social-hover">
+            <div class="d-flex align-items-center justify-content-between p-3 rounded social-item-card js-social-hover" 
+                 onclick="openSocialUrl('${item.url}')" style="cursor: pointer;">
               <div class="d-flex align-items-center gap-3 overflow-hidden">
                 <i class="bi ${item.icon} fs-3 social-icon" style="color: ${item.color};"></i>
                 <div class="text-truncate">
                   <strong class="d-block text-title">${item.name}</strong>
-                  <a href="${item.url}" target="_blank" class="text-decoration-none small text-sub text-truncate d-block">${item.url}</a>
+                  <span class="small text-sub text-truncate d-block">${item.url}</span>
                 </div>
               </div>
-              <button type="button" class="btn btn-outline-primary btn-sm ms-2 flex-shrink-0" onclick="copyDirectText('${item.url}', this)">
+              <button type="button" class="btn btn-outline-primary btn-sm ms-2 flex-shrink-0" onclick="event.stopPropagation(); copyDirectText('${item.url}', this)">
                 <i class="bi bi-copy"></i> <span>نسخ</span>
               </button>
             </div>
@@ -107,7 +108,12 @@ document.addEventListener("DOMContentLoaded", function () {
     initInteractiveMouseEffects();
 });
 
-// دالة حقن الـ CSS الخاصة بالتنسيق والهوفر لجعل الكروت متناسقة تماماً مع الداكن والفاتح
+// دالة فتح رابط السوشيال ميديا عند الضغط على الكارت
+function openSocialUrl(url) {
+    window.open(url, '_blank');
+}
+
+// دالة حقن الـ CSS الخاصة بالتنسيق والهوفر
 function injectHoverStyles() {
     const style = document.createElement('style');
     style.id = 'js-hover-styles';
