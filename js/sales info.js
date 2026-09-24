@@ -2,6 +2,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const salesContainer = document.getElementById("salesContent");
     if (!salesContainer) return;
 
+
+    //------- الكورسات المجانية------//
+const FREE_COURSES = [
+  {
+    id: "freeCourseMsg-prog",
+    icon: "bi-code-slash",
+    title: "تمهيدي البرمجة",
+    subtitle: "Introductory Programming",
+    url: "https://eraasoft.com/free-courses/tmhydy-brmg-introductory-programming",
+    meta: ["كورس مجاني", "للمبتدئين"], 
+    text: `أهلاً بيك 👋
+حجزك معانا اتأكد، وعشان تبدأ بشكل صح جهزنالك كورس "تمهيدي البرمجة" مجاناً:
+https://eraasoft.com/free-courses/tmhydy-brmg-introductory-programming
+
+ابدأ فيه من دلوقتي، ولو احتجت أي مساعدة احنا معاك.`
+  },
+  {
+    id: "freeCourseMsg-ai",
+    icon: "bi-robot",
+    title: "AI 101",
+    subtitle: "مقدمة في الذكاء الاصطناعي",
+    url: "https://eraasoft.com/free-courses/artificial-intelligence-101/preview",
+    meta: ["كورس مجاني", "للمبتدئين"],
+    text: `أهلاً بيك 👋
+حجزك معانا اتأكد، وعشان تبدأ بشكل صح جهزنالك كورس "AI 101" مجاناً:
+https://eraasoft.com/free-courses/artificial-intelligence-101/preview
+
+ابدأ فيه من دلوقتي، ولو احتجت أي مساعدة احنا معاك.`
+  }
+];
+
     // 🌟 إضافة تأثيرات الـ Hover المخصصة والمطبقة على ألوان المود الداكن والفاتح
     injectHoverStyles();
 
@@ -54,6 +85,44 @@ document.addEventListener("DOMContentLoaded", function () {
           `;
         });
     }
+
+
+
+
+        // 2.5 كروت الكورسات المجانية
+    FREE_COURSES.forEach((c, index) => {
+        const chips = c.meta.map(m => `
+            <span class="d-inline-flex align-items-center gap-1 px-2 py-1 rounded small"
+                  style="border:1px solid rgba(128,128,128,.3); background:rgba(128,128,128,.08);">${m}</span>
+        `).join("");
+
+        html += `
+        <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-delay="${(index + 1) * 100}">
+          <div class="dip-card js-hover-card">
+            <div class="dip-head">
+              <div class="dip-icon"><i class="bi ${c.icon}"></i></div>
+              <div>
+                <h3 class="dip-name">${c.title}</h3>
+                <p class="dip-cat">${c.subtitle}</p>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-2 mb-3">${chips}</div>
+            <div class="msg-box mb-3" id="${c.id}">${c.text}</div>
+            <div class="dip-actions">
+              <button type="button" class="btn-eh" onclick="copySalesText('${c.id}', this)">
+                <i class="bi bi-clipboard"></i><span>نسخ رسالة المحتوى</span>
+              </button>
+              <button type="button" class="btn-eh btn-eh--ghost" onclick="copyDirectText('${c.url}', this)">
+                <i class="bi bi-link-45deg"></i><span>نسخ لينك المحتوى</span>
+              </button>
+            </div>
+            <a class="d-inline-flex align-items-center gap-1 mt-3 small fw-bold" href="${c.url}" target="_blank" rel="noopener">
+              <i class="bi bi-box-arrow-up-left"></i> صفحة الكورس
+            </a>
+          </div>
+        </div>
+        `;
+    });
 
     // 3. كارت منصات التواصل الاجتماعي (Social Media Card)
     if (window.SOCIAL_MEDIA_LINKS) {
