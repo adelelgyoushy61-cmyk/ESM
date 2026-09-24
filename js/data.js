@@ -474,8 +474,8 @@ window.SOCIAL_MEDIA_TEXT = `Eraa-social media
 window.SOCIAL_MEDIA_LINKS = [
   { name: "الموقع الرسمي", url: "https://www.eraasoft.com", icon: "bi-globe", color: "#0d6efd" },
   { name: "صفحة فيسبوك", url: "https://facebook.com/eraasoft", icon: "bi-facebook", color: "#1877f2" },
-  { name: "جروب الفيسبوك (مجتمع المتعلمين)", url: "https://facebook.com/groups/2128494490777624", icon: "bi-people-fill", color: "#1877f2" },
-  { name: "انستجرام", url: "instagram.com/eraasoft1", icon: "bi-instagram", color: "#e4405f" },
+  { name: "جروب الفيسبوك ( Community )", url: "https://www.facebook.com/share/g/1AsLEkxjXx/", icon: "bi-people-fill", color: "#1877f2" },
+  { name: "انستجرام", url: "https://www.instagram.com/eraa_soft?stkn=MXJvb284aXNicDc4Nw==", icon: "bi-instagram", color: "#e4405f" },
   { name: "قناة واتساب", url: "https://whatsapp.com/channel/0029VatAmJmBadmhpf2zZb47", icon: "bi-whatsapp", color: "#25d366" },
   { name: "تليجرام", url: "https://t.me/et3lembarmagah", icon: "bi-telegram", color: "#24a1de" },
   { name: "يوتيوب", url: "https://youtube.com/@eraasoft", icon: "bi-youtube", color: "#ff0000" },
