@@ -1,4 +1,3 @@
-/* الناف بار + الفوتر + دوال النسخ والتنبيه — مشتركة بين كل الصفحات */
 (function () {
   const page = document.body.dataset.page;
 
