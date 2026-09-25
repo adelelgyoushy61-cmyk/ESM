@@ -492,3 +492,28 @@ window.SOCIAL_MEDIA_LINKS = [
   { name: "يوتيوب", url: "https://youtube.com/@eraasoft", icon: "bi-youtube", color: "#ff0000" },
   { name: "لينكد إن", url: "https://linkedin.com/company/eraasoft/posts", icon: "bi-linkedin", color: "#0a66c2" }
 ];
+
+
+/* ---------- كود زرار العودة للأعلى ---------- */
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTopBtn = document.getElementById("backToTop");
+
+  if (!backToTopBtn) return;
+
+  // إظهار وإخفاء الزرار عند السكرول
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  // العودة للأعلى بسلاسة
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
