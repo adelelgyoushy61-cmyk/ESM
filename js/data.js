@@ -208,25 +208,6 @@ window.FEEDBACK = {
   ],
 
 
-  videos: [
-    { diploma: "flutter", title: "فيدباك طالب Flutter", url: "https://drive.google.com/file/d/1UQCO_YWiXB_NKq4j14AerhWuvSXWKu6i/view?usp=drive_link " },
-    { diploma: "flutter", title: "فيدباك طالب Flutter", url: "https://drive.google.com/file/d/1sgxsa2U7pd_nx9o-9pLBp61gU546vN7g/view?usp=drive_link" },
-    { diploma: ".net", title: "فيدباك طالب .Net", url: "https://drive.google.com/file/d/1E11UrJvqsD9BYyiXkHxjmeG2iy-yz7Nf/view?usp=drive_link" },
-    { diploma: ".net", title: "فيدباك طالب .Net", url: "https://drive.google.com/file/d/1JTYxwaHr-FF_9CoCxP_WGuJvEtlRV2ZP/view?usp=drive_link" },
-    { diploma: "front end ", title: "فيدباك طالب Front end", url: "https://drive.google.com/file/d/11akwOQagsomR84zEPYuQ6OFByUuJt7Lt/view?usp=drive_link" },
-    { diploma: "front end ", title: "فيدباك طالب Front end", url: "https://drive.google.com/file/d/1-UUXc-iJAT7RzkfirtN6vBKlTyofJwiI/view?usp=drive_link" },
-    { diploma: "uiux ", title: "فيدباك طالب UIUX", url: "https://drive.google.com/file/d/12z-EDeWygY9J18Es9TuwMkYHoo_t2Bko/view?usp=drive_link" },
-    { diploma: "uiux ", title: "فيدباك طالب UIUX", url: "https://drive.google.com/file/d/1g-BYcnTJKtmcKKq2XCglY-I0UrrfNY74/view?usp=drive_link" },
-    { diploma: "data analysis ", title: "فيدباك طالب Data analysis", url: "https://drive.google.com/file/d/1Awhs1FShUMO6DGxZ_KjYlAkSNxWjdQhF/view?usp=drive_link" },
-    { diploma: "data analysis ", title: "فيدباك طالب Data analysis", url: "https://drive.google.com/file/d/1z9jEToA1xTtFTtJthBAWnAyS1-3h1dBE/view?usp=drive_link" },
-    { diploma: "php ", title: "فيدباك طالب PHP", url: "https://drive.google.com/file/d/1zxdx_qdO2BcRCXleeQI54kg3FCTw5s0h/view?usp=drive_link" },
-    { diploma: "php ", title: "فيدباك طالب PHP", url: "https://drive.google.com/file/d/1b22k3c_AU2YVI30oxjg7xz_baHxEXmyo/view?usp=drive_link" },
-    { diploma: "java ", title: "فيدباك طالب JAVA", url: "https://drive.google.com/file/d/1K9G8UUiAaQcNych58lH_wr20wcdo91bq/view?usp=drive_link" },
-    { diploma: "ai", title: "فيدباك طالب AI", url: "https://drive.google.com/file/d/1KWcIEk3lFBXA65wpTUl1ziQuwN520DZE/view?usp=drive_link" },
-    { diploma: "CS8", title: "فيدباك طالب CS8", url: "https://drive.google.com/file/d/1v6JG7dKrqvoXmz96OB4KROsRs9-gVOh3/view?usp=drive_link" }
-  ]
-};
-
 /* ---- أول سيشن + الإنستراكتور -----*/
 
 window.SESSIONS = {
