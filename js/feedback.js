@@ -204,31 +204,34 @@
     return new URL(url, window.location.href).href;
   }
 
-  grid.addEventListener("click", e => {
-    const c = e.target.closest("[data-copylink]");
-    if (c) {
-      const it = filtered()[+c.dataset.copylink];
-      if (it) {
-        const link = absUrl(it.src);
-        if (window.EraaUI && typeof EraaUI.copyWithFeedback === "function") {
-          EraaUI.copyWithFeedback(c, link, `تم نسخ لينك صورة ${dipName(it.diploma)}`);
-        } else if (navigator.clipboard) {
-          navigator.clipboard.writeText(link).then(() => {
-            const span = c.querySelector("span");
-            if (span) {
-              const originalText = span.innerText;
-              span.innerText = "تم النسخ!";
-              c.classList.add("is-copied");
-              setTimeout(() => {
-                span.innerText = originalText;
-                c.classList.remove("is-copied");
-              }, 2000);
-            }
-          });
-        }
+ grid.addEventListener("click", e => {
+  const c = e.target.closest("[data-copylink]");
+  if (c) {
+    const it = filtered()[+c.dataset.copylink];
+    if (it) {
+      // يقرأ الرابط الخارجي لو موجود ومكتوب، وإلا ينسخ مسار الصورة المحلي المباشر
+      const link = (it.externalUrl && it.externalUrl.trim() !== "") ? it.externalUrl : absUrl(it.src);
+      
+      if (window.EraaUI && typeof EraaUI.copyWithFeedback === "function") {
+        EraaUI.copyWithFeedback(c, link, `تم نسخ لينك صورة ${dipName(it.diploma)}`);
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(link).then(() => {
+          const span = c.querySelector("span");
+          if (span) {
+            const originalText = span.innerText;
+            span.innerText = "تم النسخ!";
+            c.classList.add("is-copied");
+            setTimeout(() => {
+              span.innerText = originalText;
+              c.classList.remove("is-copied");
+            }, 2000);
+          }
+        });
       }
-      return;
     }
+    return;
+  }
+
 
     const o = e.target.closest("[data-open]");
     if (o) {
