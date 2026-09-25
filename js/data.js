@@ -158,16 +158,16 @@ window.FEEDBACK = {
     { diploma: ".net", src: "assets/feedback/dot net/dot-9.jpeg", externalUrl: "https://lnkd.in/p/eh74xgQD" },
     { diploma: ".net", src: "assets/feedback/dot net/dot-10.jpeg", externalUrl: "https://lnkd.in/p/ey72HPyd" },
 
-    { diploma: "da", src: "/assets/feedback/DA/DA-1.jpeg", externalUrl: "https://www.facebook.com/share/1EVB66esC5/" },
-    { diploma: "da", src: "/assets/feedback/DA/DA-2.jpeg", externalUrl: "https://www.facebook.com/share/1A6jwaRQKi/" },
-    { diploma: "da", src: "/assets/feedback/DA/DA-3.jpeg", externalUrl: "https://www.facebook.com/share/19KtjCXhyz/" },
-    { diploma: "da", src: "/assets/feedback/DA/DA-4.jpeg", externalUrl: "https://www.facebook.com/share/18HtASw34P/" },
-    { diploma: "da", src: "/assets/feedback/DA/DA-5.jpeg", externalUrl: "https://www.facebook.com/share/18Vn9RRrVR/" },
-    { diploma: "da", src: "/assets/feedback/DA/DA-6.jpeg", externalUrl: "https://www.facebook.com/share/1JkGEYhnFq/" },
-    { diploma: "da", src: "/assets/feedback/DA/DA-7.jpeg", externalUrl: "https://www.facebook.com/share/1FPFWmwH7M/" },
-    { diploma: "da", src: "/assets/feedback/DA/DA-8.jpeg", externalUrl: "https://www.facebook.com/share/18drdA17cD/" },
-    { diploma: "da", src: "/assets/feedback/DA/DA-9.jpeg", externalUrl: "https://www.facebook.com/share/1Ey2FfC5ct/" },
-    { diploma: "da", src: "/assets/feedback/DA/DA-10.jpeg", externalUrl: "https://www.facebook.com/share/1FV1ZH3pdQ/" },
+    { diploma: "da", src: "assets/feedback/DA/DA-1.jpeg", externalUrl: "https://www.facebook.com/share/1EVB66esC5/" },
+    { diploma: "da", src: "assets/feedback/DA/DA-2.jpeg", externalUrl: "https://www.facebook.com/share/1A6jwaRQKi/" },
+    { diploma: "da", src: "assets/feedback/DA/DA-3.jpeg", externalUrl: "https://www.facebook.com/share/19KtjCXhyz/" },
+    { diploma: "da", src: "assets/feedback/DA/DA-4.jpeg", externalUrl: "https://www.facebook.com/share/18HtASw34P/" },
+    { diploma: "da", src: "assets/feedback/DA/DA-5.jpeg", externalUrl: "https://www.facebook.com/share/18Vn9RRrVR/" },
+    { diploma: "da", src: "assets/feedback/DA/DA-6.jpeg", externalUrl: "https://www.facebook.com/share/1JkGEYhnFq/" },
+    { diploma: "da", src: "assets/feedback/DA/DA-7.jpeg", externalUrl: "https://www.facebook.com/share/1FPFWmwH7M/" },
+    { diploma: "da", src: "assets/feedback/DA/DA-8.jpeg", externalUrl: "https://www.facebook.com/share/18drdA17cD/" },
+    { diploma: "da", src: "assets/feedback/DA/DA-9.jpeg", externalUrl: "https://www.facebook.com/share/1Ey2FfC5ct/" },
+    { diploma: "da", src: "assets/feedback/DA/DA-10.jpeg", externalUrl: "https://www.facebook.com/share/1FV1ZH3pdQ/" },
 
     { diploma: "cs8", src: "assets/feedback/CS8/cs8-01.jpg", externalUrl: "https://www.facebook.com/share/189M1NhaSP/" },
     { diploma: "cs8", src: "assets/feedback/CS8/cs8-02.jpg", externalUrl: "https://www.facebook.com/share/1BzYgvFqPm/" },
@@ -180,31 +180,31 @@ window.FEEDBACK = {
     { diploma: "cs8", src: "assets/feedback/CS8/cs8-09.jpg", externalUrl: "https://www.facebook.com/share/19Ki9A9QWv/" },
     { diploma: "cs8", src: "assets/feedback/CS8/cs8-10.jpg", externalUrl: "https://www.facebook.com/share/1C5GDffJM6/" },
 
-    { diploma: "Front End", src: "/assets/feedback/front/Front-1.jpeg", externalUrl: "" },
-    { diploma: "Front End", src: "/assets/feedback/front/Front-2.jpeg", externalUrl: "" },
-    { diploma: "Front End", src: "/assets/feedback/front/Front-3.jpeg", externalUrl: "" },
-    { diploma: "Front End", src: "/assets/feedback/front/Front-4.jpeg", externalUrl: "" },
-    { diploma: "Front End", src: "/assets/feedback/front/Front-5.jpeg", externalUrl: "" },
-    { diploma: "Front End", src: "/assets/feedback/front/Front-6.jpeg", externalUrl: "" },
-    { diploma: "Front End", src: "/assets/feedback/front/Front-7.jpeg", externalUrl: "" },
-    { diploma: "Front End", src: "/assets/feedback/front/Front-8.jpeg", externalUrl: "" },
-    { diploma: "Front End", src: "/assets/feedback/front/Front-9.jpeg", externalUrl: "" },
-    { diploma: "Front End", src: "/assets/feedback/front/Front-10.jpeg", externalUrl: "" },
+    { diploma: "Front End", src: "assets/feedback/front/Front-1.jpeg", externalUrl: "" },
+    { diploma: "Front End", src: "assets/feedback/front/Front-2.jpeg", externalUrl: "" },
+    { diploma: "Front End", src: "assets/feedback/front/Front-3.jpeg", externalUrl: "" },
+    { diploma: "Front End", src: "assets/feedback/front/Front-4.jpeg", externalUrl: "" },
+    { diploma: "Front End", src: "assets/feedback/front/Front-5.jpeg", externalUrl: "" },
+    { diploma: "Front End", src: "assets/feedback/front/Front-6.jpeg", externalUrl: "" },
+    { diploma: "Front End", src: "assets/feedback/front/Front-7.jpeg", externalUrl: "" },
+    { diploma: "Front End", src: "assets/feedback/front/Front-8.jpeg", externalUrl: "" },
+    { diploma: "Front End", src: "assets/feedback/front/Front-9.jpeg", externalUrl: "" },
+    { diploma: "Front End", src: "assets/feedback/front/Front-10.jpeg", externalUrl: "" },
 
-    { diploma: "PHP", src: "/assets/feedback/PHP/PHP-1.jpeg", externalUrl: "https://lnkd.in/p/euqZywnD" },
-    { diploma: "PHP", src: "/assets/feedback/PHP/PHP-2.jpeg", externalUrl: "https://lnkd.in/p/eQCBF4m8" },
-    { diploma: "PHP", src: "/assets/feedback/PHP/PHP-3.jpeg", externalUrl: "https://lnkd.in/p/eW6JRze6" },
+    { diploma: "PHP", src: "assets/feedback/PHP/PHP-1.jpeg", externalUrl: "https://lnkd.in/p/euqZywnD" },
+    { diploma: "PHP", src: "assets/feedback/PHP/PHP-2.jpeg", externalUrl: "https://lnkd.in/p/eQCBF4m8" },
+    { diploma: "PHP", src: "assets/feedback/PHP/PHP-3.jpeg", externalUrl: "https://lnkd.in/p/eW6JRze6" },
     
-    { diploma: "UIXU", src: "/assets/feedback/UIUX/UIUX-1.jpeg", externalUrl: "https://lnkd.in/p/esyACFrp" },
-    { diploma: "UIXU", src: "/assets/feedback/UIUX/UIUX-2.jpeg", externalUrl: "https://lnkd.in/p/e-nMRN_2" },
-    { diploma: "UIXU", src: "/assets/feedback/UIUX/UIUX-3.jpeg", externalUrl: "https://lnkd.in/p/e-ngh2ZV" },
-    { diploma: "UIXU", src: "/assets/feedback/UIUX/UIUX-4.jpeg", externalUrl: "https://lnkd.in/p/eFS6VwR4" },
-    { diploma: "UIXU", src: "/assets/feedback/UIUX/UIUX-5.jpeg", externalUrl: "https://lnkd.in/p/eq-UCWKE" },
-    { diploma: "UIXU", src: "/assets/feedback/UIUX/UIUX-6.jpeg", externalUrl: "https://lnkd.in/p/e9PZFTAn" },
-    { diploma: "UIXU", src: "/assets/feedback/UIUX/UIUX-7.jpeg", externalUrl: "https://lnkd.in/p/e36MMeGs" },
-    { diploma: "UIXU", src: "/assets/feedback/UIUX/UIUX-8.jpeg", externalUrl: "https://lnkd.in/p/ekTQQ-GB" },
-    { diploma: "UIXU", src: "/assets/feedback/UIUX/UIUX-9.jpeg", externalUrl: "https://lnkd.in/p/eseUNbAN" },
-    { diploma: "UIXU", src: "/assets/feedback/UIUX/UIUX-10.jpeg", externalUrl: "https://lnkd.in/p/euBWZF84" }
+    { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-1.jpeg", externalUrl: "https://lnkd.in/p/esyACFrp" },
+    { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-2.jpeg", externalUrl: "https://lnkd.in/p/e-nMRN_2" },
+    { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-3.jpeg", externalUrl: "https://lnkd.in/p/e-ngh2ZV" },
+    { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-4.jpeg", externalUrl: "https://lnkd.in/p/eFS6VwR4" },
+    { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-5.jpeg", externalUrl: "https://lnkd.in/p/eq-UCWKE" },
+    { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-6.jpeg", externalUrl: "https://lnkd.in/p/e9PZFTAn" },
+    { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-7.jpeg", externalUrl: "https://lnkd.in/p/e36MMeGs" },
+    { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-8.jpeg", externalUrl: "https://lnkd.in/p/ekTQQ-GB" },
+    { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-9.jpeg", externalUrl: "https://lnkd.in/p/eseUNbAN" },
+    { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-10.jpeg", externalUrl: "https://lnkd.in/p/euBWZF84" }
   ],
 
 
@@ -507,7 +507,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       backToTopBtn.classList.remove("show");
     }
-  });
+  })
 
   // العودة للأعلى بسلاسة
   backToTopBtn.addEventListener("click", () => {
