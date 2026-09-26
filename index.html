@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,16 +11,38 @@
   <link rel="stylesheet" href="assets/vendor/aos.css">
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="css/style.css">
- 
 </head>
+
 <body data-page="diplomas">
- 
-  <!-- قالب الزرار (سيتم إدراجه تلقائياً بجانب اللوجو داخل الناف بار) -->
+
+  <!-- GSAP Intro / Splash Screen -->
+  <div id="splash">
+    <div class="splash-glow" id="splash-glow"></div>
+    <div class="splash-container">
+      <div class="splash-icon-wrap" id="splash-icon">
+        <i class="bi bi-code-slash"></i>
+      </div>
+      <h1 class="splash-title" id="splash-title">
+        <!-- تقسيم الكلمة لحروف ليتم تحريكها بـ GSAP -->
+        <span class="splash-char">E</span>
+        <span class="splash-char">r</span>
+        <span class="splash-char">a</span>
+        <span class="splash-char">a</span>
+        <span class="splash-char">S</span>
+        <span class="splash-char">o</span>
+        <span class="splash-char">f</span>
+        <span class="splash-char">t</span>
+      </h1>
+      <div class="splash-sub" id="splash-sub">Sales Hub</div>
+    </div>
+  </div>
+
+  <!-- قالب الزرار -->
   <template id="theme-toggle-template">
     <button id="theme-toggle" class="theme-toggle" aria-label="تغيير الوضع">
       <span class="toggle-icon">
-        <!-- أيقونة الشمس (Light Mode) -->
-        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="5"></circle>
           <line x1="12" y1="1" x2="12" y2="3"></line>
           <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -30,8 +53,8 @@
           <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
-        <!-- أيقونة القمر (Dark Mode) -->
-        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
       </span>
@@ -43,15 +66,15 @@
   <header class="eh-hero on-dark">
     <div class="container">
       <h1 class="animate__animated animate__fadeInUp">اختار الدبلومة وابعتها للعميل في ضغطة</h1>
-<p class="lead animate__animated animate__fadeInUp" style="animation-delay:.12s">
-  <span class="bg-warning text-dark fw-bold px-3 py-1 rounded shadow-sm d-inline-block">
-    صلي علي النبي ونت شغال عشان ربنا يكرمك
-  </span>
-</p>
+      <p class="lead animate__animated animate__fadeInUp" style="animation-delay:.12s">
+        <span class="bg-warning text-dark fw-bold px-3 py-1 rounded shadow-sm d-inline-block">
+          صلي علي النبي ونت شغال عشان ربنا يكرمك
+        </span>
+      </p>
       <div class="search-wrap animate__animated animate__fadeInUp" style="animation-delay:.24s">
         <i class="bi bi-search" aria-hidden="true"></i>
-        <input id="dipSearch" type="search" class="form-control" autocomplete="off"
-               placeholder="دور على دبلومة…    " aria-label="بحث عن دبلومة">
+        <input id="dipSearch" type="search" class="form-control" autocomplete="off" placeholder="دور على دبلومة…"
+          aria-label="بحث عن دبلومة">
       </div>
     </div>
   </header>
@@ -63,7 +86,8 @@
     </div>
 
     <div class="row g-3 g-lg-4" id="dipGrid">
-      <div class="load-note" style="padding:16px;border:1px dashed #999;border-radius:10px;background:#fff;color:#444;line-height:1.9"></div>
+      <div class="load-note"
+        style="padding:16px;border:1px dashed #999;border-radius:10px;background:#fff;color:#444;line-height:1.9"></div>
     </div>
 
     <div class="empty" id="emptyState" hidden>
@@ -71,7 +95,7 @@
       <h2>مفيش دبلومة بالاسم ده</h2>
       <p>جرّب كلمة تانية أو اختار "الكل".</p>
     </div>
-  </main> 
+  </main>
 
   <!-- معاينة الرسالة -->
   <div class="modal fade" id="msgModal" tabindex="-1" aria-labelledby="msgModalTitle" aria-hidden="true">
@@ -85,28 +109,34 @@
           <div class="msg-box" id="msgBox"></div>
         </div>
         <div class="modal-footer justify-content-start gap-2">
-          <button type="button" class="btn-eh" id="msgCopy"><i class="bi bi-clipboard2"></i><span>نسخ الرسالة كامله</span></button>
-          <button type="button" class="btn-eh btn-eh--ghost" id="msgCopyLink"><i class="bi bi-link-45deg"></i><span>نسخ لينك المحتوي</span></button>
+          <button type="button" class="btn-eh" id="msgCopy"><i class="bi bi-clipboard2"></i><span>نسخ الرسالة
+              كامله</span></button>
+          <button type="button" class="btn-eh btn-eh--ghost" id="msgCopyLink"><i class="bi bi-link-45deg"></i><span>نسخ
+              لينك المحتوي</span></button>
         </div>
       </div>
     </div>
-  </div>
+    </main>
 
-  <!-- زرار العودة للأعلى -->
-<button id="backToTop" class="back-to-top" type="button" aria-label="العودة للأعلى" title="العودة للأعلى">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="m18 15-6-6-6 6"/>
-  </svg>
-</button>
+    <!-- زرار العودة للأعلى -->
+    <button id="backToTop" class="back-to-top" type="button" aria-label="العودة للأعلى" title="العودة للأعلى">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m18 15-6-6-6 6" />
+      </svg>
+    </button>
 
-  <div id="site-footer"></div>
+    <div id="site-footer"></div>
 
-  <script src="assets/vendor/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/layout.js"></script>
-  <script src="js/diplomas.js"></script>
-  <script src="js/sales info.js"></script>
+    <!-- مكتبة GSAP للأنيميشن -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script src="assets/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/diplomas.js"></script>
+    <script src="js/sales info.js"></script>
 
 </body>
 </html>
