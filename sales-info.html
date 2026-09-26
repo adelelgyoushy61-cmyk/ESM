@@ -13,7 +13,7 @@
 </head>
 <body data-page="sales-info">
 
-  <!-- قالب زرار التبديل -->
+  <!-- قالب زرار التبديل (سيتم إدراجه تلقائياً بجانب اللوجو داخل الناف بار) -->
   <template id="theme-toggle-template">
     <button id="theme-toggle" class="theme-toggle" aria-label="تغيير الوضع">
       <span class="toggle-icon">
@@ -49,63 +49,16 @@
   </header>
 
   <main class="container py-4 py-lg-5">
-    
-    <!-- كارت بيانات منصة الطلاب (LMS) بالعرض الكامل -->
-    <div class="row g-4 mb-4">
-      <div class="col-12">
-        <div class="card shadow-sm border-0 rounded-3">
-          <div class="card-header bg-primary text-white d-flex align-items-center justify-content-between py-3 px-3 px-md-4">
-            <div class="d-flex align-items-center gap-2">
-              <i class="bi bi-laptop fs-4"></i>
-              <h5 class="card-title mb-0 fw-bold">منصة الطلاب (LMS)</h5>
-            </div>
-            <!-- زر الانتقال المباشر للمنصة -->
-            <a href="https://admin.eraasoft.online/students" target="_blank" rel="noopener" class="btn btn-light text-primary fw-bold shadow-sm btn-sm px-3">
-              فتح المنصة <i class="bi bi-box-arrow-up-right ms-1"></i>
-            </a>
-          </div>
-          <div class="card-body p-3 p-md-4">
-            <div class="row g-3">
-              
-              <!-- اسم المستخدم -->
-              <div class="col-12 col-md-6">
-                <label class="form-label fw-bold text-secondary mb-1">اسم المستخدم (User Name)</label>
-                <div class="input-group">
-                  <input type="text" class="form-control text-start bg-light fw-medium" value="salseinfoo@eraasoft.com" readonly dir="ltr">
-                  <button type="button" class="btn btn-outline-primary" onclick="EraaUI.copyWithFeedback(this, 'salseinfoo@eraasoft.com', 'تم نسخ اسم المستخدم')">
-                    <i class="bi bi-copy me-1"></i> نسخ
-                  </button>
-                </div>
-              </div>
-
-              <!-- كلمة السر -->
-              <div class="col-12 col-md-6">
-                <label class="form-label fw-bold text-secondary mb-1">كلمة السر (Password)</label>
-                <div class="input-group">
-                  <input type="text" class="form-control text-start bg-light fw-medium" value="salseinfo@#$" readonly dir="ltr">
-                  <button type="button" class="btn btn-outline-primary" onclick="EraaUI.copyWithFeedback(this, 'salseinfo@#$', 'تم نسخ كلمة السر')">
-                    <i class="bi bi-copy me-1"></i> نسخ
-                  </button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- باقي محتوى الصفحة الديناميكي (الكروت الأخرى) -->
     <div class="row g-4 justify-content-center" id="salesContent">
     </div>
   </main>
 
-  <!-- زرار العودة للأعلى -->
-  <button id="backToTop" class="back-to-top" type="button" aria-label="العودة للأعلى" title="العودة للأعلى">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="m18 15-6-6-6 6"/>
-    </svg>
-  </button>
+    <!-- زرار العودة للأعلى -->
+<button id="backToTop" class="back-to-top" type="button" aria-label="العودة للأعلى" title="العودة للأعلى">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m18 15-6-6-6 6"/>
+  </svg>
+</button>
 
   <div id="site-footer"></div>
 
