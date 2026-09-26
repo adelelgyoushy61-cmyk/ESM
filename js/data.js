@@ -124,13 +124,14 @@ window.buildMessage = function (d) {
     "4- Presentation & Communication Skills:  تعرف تعرض شغلك وتتواصل بشكل أفضل. ",
     "5- Interview Skills: تتعلم إزاي تقدم نفسك وتتعامل مع الـInterviews. ",
     "6- Business English: تطور الـEnglish اللي محتاجه في بيئة العمل.",
-   
+
     "",
     "🔗 لينك الدبلومة:",
     d.url
   );
   return lines.join("\n");
 };
+
 
 /* ---------- الفيدباكس ----------*/
 window.FEEDBACK = {
@@ -209,8 +210,6 @@ window.FEEDBACK = {
     { diploma: "طلابنا اللي أشتغلوا", src: "assets/feedback/طلابنا اللي اشتغلوا/work-3.jpeg", externalUrl: "https://www.facebook.com/share/1LyAQwHABN/" },
     { diploma: "طلابنا اللي أشتغلوا", src: "assets/feedback/طلابنا اللي اشتغلوا/work-4.jpg", externalUrl: "https://www.facebook.com/share/19iKzTdKJH/" }
   ],
-
-
 
   videos: [
     { diploma: "flutter", title: "فيدباك طالب Flutter", url: "https://drive.google.com/file/d/1UQCO_YWiXB_NKq4j14AerhWuvSXWKu6i/view?usp=drive_link " },
@@ -294,43 +293,43 @@ window.BRANCHES = [
   }
 ];
 
-    document.addEventListener("DOMContentLoaded", function () {
-      // الانتظار لحين تحميل الناف بار من layout.js
-      setTimeout(() => {
-        const navbarBrand = document.querySelector("#site-nav .navbar-brand");
-        const template = document.getElementById("theme-toggle-template");
+document.addEventListener("DOMContentLoaded", function () {
+  // الانتظار لحين تحميل الناف بار من layout.js
+  setTimeout(() => {
+    const navbarBrand = document.querySelector("#site-nav .navbar-brand");
+    const template = document.getElementById("theme-toggle-template");
 
-        if (navbarBrand && template) {
-          // إضافة الزرار بجانب اللوجو مباشرة
-          const toggleNode = template.content.cloneNode(true);
-          navbarBrand.parentNode.insertBefore(toggleNode, navbarBrand.nextSibling);
+    if (navbarBrand && template) {
+      // إضافة الزرار بجانب اللوجو مباشرة
+      const toggleNode = template.content.cloneNode(true);
+      navbarBrand.parentNode.insertBefore(toggleNode, navbarBrand.nextSibling);
 
-          // إعطاء أمرين الضغط والتغيير
-          const toggleBtn = document.getElementById("theme-toggle");
-          toggleBtn.addEventListener("click", () => {
-            let isDark = document.documentElement.getAttribute("data-theme") === "dark";
-            if (isDark) {
-              document.documentElement.removeAttribute("data-theme");
-              localStorage.setItem("theme", "light");
-            } else {
-              document.documentElement.setAttribute("data-theme", "dark");
-              localStorage.setItem("theme", "dark");
-            }
-          });
+      // إعطاء أمرين الضغط والتغيير
+      const toggleBtn = document.getElementById("theme-toggle");
+      toggleBtn.addEventListener("click", () => {
+        let isDark = document.documentElement.getAttribute("data-theme") === "dark";
+        if (isDark) {
+          document.documentElement.removeAttribute("data-theme");
+          localStorage.setItem("theme", "light");
+        } else {
+          document.documentElement.setAttribute("data-theme", "dark");
+          localStorage.setItem("theme", "dark");
         }
-      }, 100);
-    });
-  
-   
-    // تفعيل الـ Theme المحفوظ فوراً لتجنب الـ Flickering عند التحميل
-    const savedTheme = localStorage.getItem('theme') || 
-      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    if (savedTheme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
+      });
     }
+  }, 100);
+});
 
 
-    /* ---------- ارقام التحويل الخاصه بالحجز ---------- */
+// تفعيل الـ Theme المحفوظ فوراً لتجنب الـ Flickering عند التحميل
+const savedTheme = localStorage.getItem('theme') ||
+  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+if (savedTheme === 'dark') {
+  document.documentElement.setAttribute('data-theme', 'dark');
+}
+
+
+/* ---------- ارقام التحويل الخاصه بالحجز ---------- */
 window.SALES_INFO = {
   fingerprintPass: "Mmm123@#$m",
   paymentMessages: [
@@ -385,16 +384,16 @@ window.SALES_INFO = {
 
 
 
-   document.addEventListener("DOMContentLoaded", function () {
-      const salesContainer = document.getElementById("salesContent");
-      
-      if (!window.SALES_INFO) return;
+document.addEventListener("DOMContentLoaded", function () {
+  const salesContainer = document.getElementById("salesContent");
 
-      let html = '';
+  if (!window.SALES_INFO) return;
 
-      // 1. إضافة بطاقة باسورد البصمة
-      if (window.SALES_INFO.fingerprintPass) {
-        html += `
+  let html = '';
+
+  // 1. إضافة بطاقة باسورد البصمة
+  if (window.SALES_INFO.fingerprintPass) {
+    html += `
           <div class="col-12" data-aos="fade-up">
             <div class="dip-card">
               <div class="dip-head">
@@ -413,12 +412,12 @@ window.SALES_INFO = {
             </div>
           </div>
         `;
-      }
+  }
 
-      // 2. إضافة رسائل التحويل والرموز
-      if (window.SALES_INFO.paymentMessages && window.SALES_INFO.paymentMessages.length > 0) {
-        window.SALES_INFO.paymentMessages.forEach((msg, index) => {
-          html += `
+  // 2. إضافة رسائل التحويل والرموز
+  if (window.SALES_INFO.paymentMessages && window.SALES_INFO.paymentMessages.length > 0) {
+    window.SALES_INFO.paymentMessages.forEach((msg, index) => {
+      html += `
             <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-delay="${(index + 1) * 100}">
               <div class="dip-card">
                 <div class="dip-head">
@@ -437,36 +436,36 @@ window.SALES_INFO = {
               </div>
             </div>
           `;
-        });
-      }
-
-     
-
-      // تهيئة AOS بعد إضافة العناصر
-      if (typeof AOS !== 'undefined') {
-        AOS.init({ duration: 600, once: true });
-      }
     });
+  }
 
-    // وظيفة النسخ
-    function copySalesText(elementId, btn) {
-      const text = document.getElementById(elementId).innerText;
-      navigator.clipboard.writeText(text).then(() => {
-        const span = btn.querySelector('span');
-        const originalText = span.innerText;
-        span.innerText = 'تم النسخ بنجاح!';
-        btn.classList.add('is-copied');
-        
-        setTimeout(() => {
-          span.innerText = originalText;
-          btn.classList.remove('is-copied');
-        }, 2000);
-      });
-    }
+ 
 
-    // Social media  //
+  // تهيئة AOS بعد إضافة العناصر
+  if (typeof AOS !== 'undefined') {
+    AOS.init({ duration: 600, once: true });
+  }
+});
 
-    /* ---------- بيانات رسالة السوشيال ميديا ---------- */
+// وظيفة النسخ
+function copySalesText(elementId, btn) {
+  const text = document.getElementById(elementId).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const span = btn.querySelector('span');
+    const originalText = span.innerText;
+    span.innerText = 'تم النسخ بنجاح!';
+    btn.classList.add('is-copied');
+
+    setTimeout(() => {
+      span.innerText = originalText;
+      btn.classList.remove('is-copied');
+    }, 2000);
+  });
+}
+
+// Social media  //
+
+/* ---------- بيانات رسالة السوشيال ميديا ---------- */
 window.SOCIAL_MEDIA_TEXT = `Eraa-social media
 
 🔹 الموقع الرسمي:
@@ -521,3 +520,53 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+//---------------- intro-انيميشن ----------------//
+    window.addEventListener('DOMContentLoaded', () => {
+      const tl = gsap.timeline();
+
+      // 1. ظهور الخلفية المضيئة
+      tl.to("#splash-glow", {
+        opacity: 1,
+        scale: 1.5,
+        duration: 1.2,
+        ease: "power2.out"
+      })
+      // 2. انزلاق ودوران الأيقونة من الأعلى
+      .fromTo("#splash-icon", 
+        { y: -80, opacity: 0, rotation: -45 },
+        { y: 0, opacity: 1, rotation: 0, duration: 0.8, ease: "back.out(1.7)" },
+        "-=0.8"
+      )
+      // 3. دخول حروف EraaSoft حرفاً بحرف (Stagger)
+      .fromTo(".splash-char", 
+        { y: 40, opacity: 0, scale: 0.5 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.5, stagger: 0.06, ease: "power3.out" },
+        "-=0.4"
+      )
+      // 4. ظهور النص الفرعي مع توسيع المسافات
+      .fromTo("#splash-sub", 
+        { y: 20, opacity: 0, letterSpacing: "10px" },
+        { y: 0, opacity: 1, letterSpacing: "4px", duration: 0.6, ease: "power2.out" },
+        "-=0.2"
+      )
+      // 5. وقت ثبات قصير ليستمتع المستخدم بالأنيميشن //
+      .to({}, { duration: 0.6 })
+      // 6. خروج سينمائي بالكامل (Zoom Out + Fade Out) //
+      .to(".splash-container", {
+        scale: 1.15,
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.in"
+      })
+      .to("#splash", {
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.inOut",
+        onComplete: () => {
+          document.getElementById('splash').style.display = 'none';
+        }
+      }, "-=0.2");
+    });
+ 
