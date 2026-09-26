@@ -440,7 +440,7 @@ window.SALES_INFO = {
         });
       }
 
-      salesContainer.innerHTML = html;
+     
 
       // تهيئة AOS بعد إضافة العناصر
       if (typeof AOS !== 'undefined') {
