@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض مشاريع الطلاب - EraaSoft Sales Hub</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Custom Design CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+      <!-- قالب الزرار -->
+  <template id="theme-toggle-template">
+    <button id="theme-toggle" class="theme-toggle" aria-label="تغيير الوضع">
+      <span class="toggle-icon">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </span>
+    </button>
+  </template>
+
+    <!-- مكان الناف بار -->
+    <div id="site-nav"></div>
+
+    <!-- Hero Section -->
+    <header class="eh-hero on-dark">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInUp">معرض مشاريع الطلاب</h1>
+       <p class="lead animate__animated animate__fadeInUp" style="animation-delay:.12s">
+        <span class="bg-warning text-dark fw-bold px-3 py-1 rounded shadow-sm d-inline-block">
+          صلي علي النبي ونت شغال عشان ربنا يكرمك
+        </span>
+      </p>
+            <div class="search-wrap animate__animated animate__fadeInUp" style="animation-delay:.24s">
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input id="project-search-input" type="search" class="form-control" autocomplete="off" placeholder="دور علي المشروع اللي انت عايزه..." aria-label="بحث في المشاريع">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container py-4 my-2">
+        <div class="toolbar d-flex align-items-center justify-content-start flex-wrap gap-3 mb-4">
+            <div class="d-flex align-items-center gap-2 flex-wrap me-3">
+                <span class="result-count" id="results-count-text">جاري تحميل المشاريع...</span>
+            </div>
+
+            <!-- الفلاتر على اليمين -->
+            <div class="chips d-flex align-items-center gap-2 flex-wrap" id="type-filter-chips">
+                <button class="chip active" data-filter="all" aria-pressed="true">
+                    الكل <span class="n" id="cnt-all">0</span>
+                </button>
+                <button class="chip" data-filter="video" aria-pressed="false">
+                    <i class="bi bi-play-circle me-1"></i> Data analysis<span class="n" id="cnt-video">0</span>
+                </button>
+                <button class="chip" data-filter="github" aria-pressed="false">
+                    <i class="bi bi-github me-1"></i> Front end <span class="n" id="cnt-github">0</span>
+                </button>
+                <button class="chip" data-filter="behance" aria-pressed="false">
+                    <i class="bi bi-behance me-1"></i> Behance | UIUX <span class="n" id="cnt-behance">0</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="row g-4" id="projects-container"></div>
+    </main>
+
+    <!-- Video Modal -->
+    <div class="modal fade vm" id="projectVideoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-2">
+                    <h5 class="modal-title" id="projectVideoTitle">معاينة الفيديو</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="vm-frame">
+                        <iframe id="projectVideoIframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- زرار العودة للأعلى -->
+  <button id="backToTop" class="back-to-top" type="button" aria-label="العودة للأعلى" title="العودة للأعلى">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>
