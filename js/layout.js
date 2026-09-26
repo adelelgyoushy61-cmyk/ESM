@@ -1,13 +1,13 @@
-/* الناف بار + الفوتر + دوال النسخ والتنبيه — مشتركة بين كل الصفحات */
 (function () {
   const page = document.body.dataset.page;
 
 const NAV = [
   { id: "diplomas", href: "index.html", label: "الدبلومات", icon: "bi-mortarboard-fill" },
+  { id: "projects", href: "projects.html", label: "معرض المشاريع", icon: "bi-folder-symlink-fill" },
   { id: "feedback", href: "feedback.html", label: "الفيدباكس", icon: "bi-chat-heart-fill" },
   { id: "sessions", href: "sessions.html", label: "أول سيشن والإنستراكتورز", icon: "bi-play-circle-fill" },
   { id: "locations", href: "locations.html", label: "الفروع", icon: "bi-geo-alt-fill" },
-  { id: "sales-info", href: "sales-info.html", label: "sales info", icon: "bi-receipt-cutoff" }
+  { id: "sales-info", href: "sales-info.html", label: "sales info", icon: "bi-receipt-cutoff" },
 ];
 
   const navHost = document.getElementById("site-nav");
@@ -134,3 +134,5 @@ const NAV = [
 
   window.EraaUI = { toast, copyText, copyWithFeedback, aos, refreshAOS };
 })();
+
+
