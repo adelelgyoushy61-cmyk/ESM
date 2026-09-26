@@ -81,7 +81,7 @@ https://eraasoft.com/free-courses/artificial-intelligence-101/preview
                 </div>
                 <div class="mt-2">
                   <button type="button" class="btn btn-outline-primary btn-sm w-100 fw-bold py-2" style="font-size: 0.95rem;" onclick="copySalesText('lmsUserText', this)">
-                    <i class="bi bi-copy"></i> <span>  نسخ الـ User Name</span>
+                    <i class="bi bi-copy"></i> <span> Copy the User Name</span>
                   </button>
                 </div>
               </div>
@@ -98,7 +98,7 @@ https://eraasoft.com/free-courses/artificial-intelligence-101/preview
                 </div>
                 <div class="mt-2">
                   <button type="button" class="btn btn-outline-primary btn-sm w-100 fw-bold py-2" style="font-size: 0.95rem;" onclick="copySalesText('lmsPassText', this)">
-                    <i class="bi bi-copy"></i> <span>  نسخ الـ password</span>
+                    <i class="bi bi-copy"></i> <span> Copy the password</span>
                   </button>
                 </div>
               </div>
