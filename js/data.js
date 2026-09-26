@@ -132,7 +132,6 @@ window.buildMessage = function (d) {
   return lines.join("\n");
 };
 
-
 /* ---------- الفيدباكس ----------*/
 window.FEEDBACK = {
   images: [
@@ -194,7 +193,7 @@ window.FEEDBACK = {
     { diploma: "PHP", src: "assets/feedback/PHP/PHP-1.jpeg", externalUrl: "https://lnkd.in/p/euqZywnD" },
     { diploma: "PHP", src: "assets/feedback/PHP/PHP-2.jpeg", externalUrl: "https://lnkd.in/p/eQCBF4m8" },
     { diploma: "PHP", src: "assets/feedback/PHP/PHP-3.jpeg", externalUrl: "https://lnkd.in/p/eW6JRze6" },
-    
+
     { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-1.jpeg", externalUrl: "https://lnkd.in/p/esyACFrp" },
     { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-2.jpeg", externalUrl: "https://lnkd.in/p/e-nMRN_2" },
     { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-3.jpeg", externalUrl: "https://lnkd.in/p/e-ngh2ZV" },
@@ -204,8 +203,13 @@ window.FEEDBACK = {
     { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-7.jpeg", externalUrl: "https://lnkd.in/p/e36MMeGs" },
     { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-8.jpeg", externalUrl: "https://lnkd.in/p/ekTQQ-GB" },
     { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-9.jpeg", externalUrl: "https://lnkd.in/p/eseUNbAN" },
-    { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-10.jpeg", externalUrl: "https://lnkd.in/p/euBWZF84" }
+    { diploma: "UIXU", src: "assets/feedback/UIUX/UIUX-10.jpeg", externalUrl: "https://lnkd.in/p/euBWZF84" },
+    { diploma: "طلابنا اللي أشتغلوا", src: "assets/feedback/طلابنا اللي اشتغلوا/work-1.jpeg", externalUrl: "https://www.facebook.com/share/1ZEm8HbhM9/" },
+    { diploma: "طلابنا اللي أشتغلوا", src: "assets/feedback/طلابنا اللي اشتغلوا/work-2.jpeg", externalUrl: "https://www.facebook.com/share/1C3QfcqEj4/" },
+    { diploma: "طلابنا اللي أشتغلوا", src: "assets/feedback/طلابنا اللي اشتغلوا/work-3.jpeg", externalUrl: "https://www.facebook.com/share/1LyAQwHABN/" },
+    { diploma: "طلابنا اللي أشتغلوا", src: "assets/feedback/طلابنا اللي اشتغلوا/work-4.jpg", externalUrl: "https://www.facebook.com/share/19iKzTdKJH/" }
   ],
+
 
 
   videos: [
