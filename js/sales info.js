@@ -38,6 +38,76 @@ https://eraasoft.com/free-courses/artificial-intelligence-101/preview
 
     let html = '';
 
+    // 0. كارت بيانات منصة LMS بأسلوب فونت عالي الوضوح والتحديد
+    html += `
+      <div class="col-12 mb-2" data-aos="fade-up">
+        <div class="dip-card js-hover-card">
+          <div class="dip-head d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+            <div class="d-flex align-items-center gap-2">
+              <div class="dip-icon"><i class="bi bi-mortarboard-fill"></i></div>
+              <div>
+                <h3 class="dip-name" style="font-size: 1.35rem; font-weight: 800;">بيانات تسجيل دخول منصة LMS</h3>
+                <p class="dip-cat" style="font-size: 1rem; font-weight: 600;">منصة إدارة التعلم والطلاب</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row g-3">
+            <!-- 1. لينك المنصة -->
+            <div class="col-12 col-md-4">
+              <div class="p-3 rounded social-item-card d-flex flex-column justify-content-between h-100">
+                <div>
+                  <small class="text-sub d-block mb-2 fw-bold" style="font-size: 0.95rem; color: #0d6efd;">رابط المنصة (LMS URL):</small>
+                  <div class="p-3 rounded mb-2 text-truncate dir-ltr" style="background: rgba(13, 110, 253, 0.12); border: 2px solid rgba(13, 110, 253, 0.35);">
+                    <strong class="d-block text-truncate user-select-all" id="lmsUrlText" style="font-family: 'Consolas', 'Courier New', monospace; font-size: 1.05rem; font-weight: 800; color: #0d6efd; letter-spacing: 0.5px;">https://admin.eraasoft.online/students</strong>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <a href="https://admin.eraasoft.online/students" target="_blank" rel="noopener" class="btn btn-primary btn-sm w-100 fw-bold d-flex align-items-center justify-content-center gap-2 py-2" style="font-size: 0.95rem;">
+                    <i class="bi bi-box-arrow-up-right"></i> <span>فتح المنصة</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. اليوزر نيم -->
+            <div class="col-12 col-md-4">
+              <div class="p-3 rounded social-item-card d-flex flex-column justify-content-between h-100">
+                <div>
+                  <small class="text-sub d-block mb-2 fw-bold" style="font-size: 0.95rem; color: #0d6efd;">اسم المستخدم (User Name):</small>
+                  <div class="p-3 rounded mb-2 text-truncate dir-ltr" style="background: rgba(13, 110, 253, 0.12); border: 2px solid rgba(13, 110, 253, 0.35);">
+                    <strong class="d-block text-truncate user-select-all" id="lmsUserText" style="font-family: 'Consolas', 'Courier New', monospace; font-size: 1.15rem; font-weight: 800; letter-spacing: 0.8px;">salseinfoo@eraasoft.com</strong>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <button type="button" class="btn btn-outline-primary btn-sm w-100 fw-bold py-2" style="font-size: 0.95rem;" onclick="copySalesText('lmsUserText', this)">
+                    <i class="bi bi-copy"></i> <span>نسخ اليوزر نيم</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. الباسورد -->
+            <div class="col-12 col-md-4">
+              <div class="p-3 rounded social-item-card d-flex flex-column justify-content-between h-100">
+                <div>
+                  <small class="text-sub d-block mb-2 fw-bold" style="font-size: 0.95rem; color: #0d6efd;">كلمة المرور (Password):</small>
+                  <div class="p-3 rounded mb-2 text-truncate dir-ltr" style="background: rgba(13, 110, 253, 0.12); border: 2px solid rgba(13, 110, 253, 0.35);">
+                    <strong class="d-block text-truncate user-select-all" id="lmsPassText" style="font-family: 'Consolas', 'Courier New', monospace; font-size: 1.25rem; font-weight: 800; letter-spacing: 1.5px;">salseinfo@#$</strong>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <button type="button" class="btn btn-outline-primary btn-sm w-100 fw-bold py-2" style="font-size: 0.95rem;" onclick="copySalesText('lmsPassText', this)">
+                    <i class="bi bi-copy"></i> <span>نسخ الباسورد</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
     // 1. كارت باسورد تطبيق البصمة
     if (window.SALES_INFO && window.SALES_INFO.fingerprintPass) {
         html += `
@@ -86,10 +156,7 @@ https://eraasoft.com/free-courses/artificial-intelligence-101/preview
         });
     }
 
-
-
-
-        // 2.5 كروت الكورسات المجانية
+    // 2.5 كروت الكورسات المجانية
     FREE_COURSES.forEach((c, index) => {
         const chips = c.meta.map(m => `
             <span class="d-inline-flex align-items-center gap-1 px-2 py-1 rounded small"
@@ -187,6 +254,11 @@ function injectHoverStyles() {
     const style = document.createElement('style');
     style.id = 'js-hover-styles';
     style.innerHTML = `
+      .dir-ltr {
+        direction: ltr !important;
+        text-align: left !important;
+      }
+
       /* تأثير الكروت الرئيسية */
       .js-hover-card {
         transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease !important;
@@ -203,7 +275,7 @@ function injectHoverStyles() {
         transition: transform 0.3s ease;
       }
 
-      /* تنسيق كروت السوشيال ميديا الداخلية لتندمج مع الكارت الأب بدون خلفية بيضاء */
+      /* تنسيق كروت السوشيال ميديا والعناصر الداخلية */
       .social-item-card {
         background-color: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -219,9 +291,9 @@ function injectHoverStyles() {
         color: inherit;
       }
 
-      /* هوفر كروت السوشيال ميديا */
+      /* هوفر العناصر الفرعية */
       .social-item-card:hover {
-        transform: translateX(-4px);
+        transform: translateY(-2px);
         background-color: rgba(13, 110, 253, 0.15) !important;
         border-color: #0d6efd !important;
       }
@@ -232,7 +304,7 @@ function injectHoverStyles() {
         transition: transform 0.2s ease;
       }
 
-      /* دعم الثيم الفاتح لو لم يكن داكناً */
+      /* دعم الثيم الفاتح */
       html:not([data-bs-theme="dark"]) .social-item-card,
       body:not(.dark-theme):not([data-bs-theme="dark"]) .social-item-card {
         background-color: rgba(0, 0, 0, 0.03);
