@@ -3,6 +3,8 @@ window.CONTACT = {
   linkedin: "eraasoft"
 };
 
+
+
 /* ----------  ( الفلتر ) ---------- */
 window.CATEGORIES = [
   { id: "programming", label: "برمجة", color: "#0B35E8", ink: "#0B35E8" },
@@ -497,30 +499,31 @@ window.SOCIAL_MEDIA_LINKS = [
 ];
 
 
-/* ---------- كود زرار العودة للأعلى ---------- */
-document.addEventListener("DOMContentLoaded", () => {
-  const backToTopBtn = document.getElementById("backToTop");
 
-  if (!backToTopBtn) return;
+  document.addEventListener("DOMContentLoaded", () => {
+    const backToTopBtn = document.getElementById("backToTop");
 
-  // إظهار وإخفاء الزرار عند السكرول
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.classList.add("show");
-    } else {
-      backToTopBtn.classList.remove("show");
-    }
-  })
+    if (!backToTopBtn) return;
 
-  // العودة للأعلى بسلاسة
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    // إظهار وإخفاء الزرار عند السكرول
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    });
+
+    // العودة للأعلى بسلاسة عند الضغط
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
   });
-});
 
+  
 
 //---------------- intro-انيميشن ----------------//
     window.addEventListener('DOMContentLoaded', () => {
@@ -570,3 +573,409 @@ document.addEventListener("DOMContentLoaded", () => {
       }, "-=0.2");
     });
  
+window.STUDENT_PROJECTS = [
+
+
+ // ==========================================
+  // Front-End Projects (GitHub Live Demos)
+  // ==========================================
+
+  {
+    id: "fe-1",
+    diploma: "frontend",
+    type: "github",
+    title: "متجر آيفون (iPhone Store)",
+    demoUrl: "https://adelelgyoushy61-cmyk.github.io/I-phone-store/",
+    repoUrl: "https://github.com/adelelgyoushy61-cmyk/I-phone-store",
+    tags: ["E-Commerce", "JavaScript", "Responsive"]
+  },
+  {
+    id: "fe-2",
+    diploma: "frontend",
+    type: "github",
+    title: "معرض الأعمال (My Portfolio)",
+    demoUrl: "https://adelelgyoushy61-cmyk.github.io/My-Portfolio/",
+    repoUrl: "https://github.com/adelelgyoushy61-cmyk/My-Portfolio",
+    tags: ["Portfolio", "UI Design", "Front-End"]
+  },
+  {
+    id: "fe-3",
+    diploma: "frontend",
+    type: "github",
+    title: "منيو مطعم تفاعلي (Restaurant Menu)",
+    demoUrl: "https://restaurant-menu-website-93v8503q.devinapps.com/",
+    repoUrl: "https://restaurant-menu-website-93v8503q.devinapps.com/",
+    tags: ["Web App", "Interactive Menu", "UI/UX"]
+  },
+  {
+    id: "fe-4",
+    diploma: "frontend",
+    type: "github",
+    title: "قائمة المأكولات (Menu App)",
+    demoUrl: "https://adelelgyoushy61-cmyk.github.io/Menu/",
+    repoUrl: "https://github.com/adelelgyoushy61-cmyk/Menu",
+    tags: ["JavaScript", "CSS3", "Menu Design"]
+  },
+
+
+  // ==========================================
+  // Data Analysis Projects (Google Drive Videos)
+  // ==========================================
+  {
+    id: "da-1",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 1",
+    url: "https://drive.google.com/file/d/1-LCjRG881L067mfdJGHGYzzoH0oggzPr/preview",
+    tags: ["Data Analysis", "Excel", "Power BI"]
+  },
+  {
+    id: "da-2",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 2",
+    url: "https://drive.google.com/file/d/1-fvlyX6doHFhXe1wOKAcDIRGuGDESwi0/preview",
+    tags: ["Data Analysis", "Python", "SQL"]
+  },
+  {
+    id: "da-3",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 3",
+    url: "https://drive.google.com/file/d/101SM60kOU4V2ofc8Da8bLHRxkUP4HFjn/preview",
+    tags: ["Data Analysis", "Dashboard", "Power BI"]
+  },
+  {
+    id: "da-4",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 4",
+    url: "https://drive.google.com/file/d/124SZex0bjKLvZT0F7oAZkmBNj-O6ffvF/preview",
+    tags: ["Data Analysis", "Excel", "SQL"]
+  },
+  {
+    id: "da-5",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 5",
+    url: "https://drive.google.com/file/d/161ZlVgLQVTxVa2Jx00VIV1ocr8tJqTk2/preview",
+    tags: ["Data Analysis", "Power BI"]
+  },
+  {
+    id: "da-6",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 6",
+    url: "https://drive.google.com/file/d/19zwnWKDuYIlzY0L9XOqOMkcKph3qy42Y/preview",
+    tags: ["Data Analysis", "Python"]
+  },
+  {
+    id: "da-7",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 7",
+    url: "https://drive.google.com/file/d/1CBDasWfuipRozZlSVgHk9r-BQlDdlDKx/preview",
+    tags: ["Data Analysis", "SQL", "Excel"]
+  },
+  {
+    id: "da-8",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 8",
+    url: "https://drive.google.com/file/d/1CTi3Htt0zOpiYjjI0ZSiyTKhZPXWLwa8/preview",
+    tags: ["Data Analysis", "Power BI"]
+  },
+  {
+    id: "da-9",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 9",
+    url: "https://drive.google.com/file/d/1DUC152pzmB4wQKxQnRZkL3ISNyMQULHi/preview",
+    tags: ["Data Analysis", "Excel"]
+  },
+  {
+    id: "da-10",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 10",
+    url: "https://drive.google.com/file/d/1FCs2lfbvpp0Y_nRC-ShQKgWLMsh8NPI2/preview",
+    tags: ["Data Analysis", "Python", "Pandas"]
+  },
+  {
+    id: "da-11",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 11",
+    url: "https://drive.google.com/file/d/1GUWNlMjB4bJtIHlsX4h19Rx97QGWe4G5/preview",
+    tags: ["Data Analysis", "Power BI"]
+  },
+  {
+    id: "da-12",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 12",
+    url: "https://drive.google.com/file/d/1GyFj341AyqBgFLVk3wEMGkchIGtGQzGv/preview",
+    tags: ["Data Analysis", "SQL"]
+  },
+  {
+    id: "da-13",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 13",
+    url: "https://drive.google.com/file/d/1IcmZVfPt-OIVbG3QJx-6M9i4q0851a6E/preview",
+    tags: ["Data Analysis", "Excel", "Dashboard"]
+  },
+  {
+    id: "da-14",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 14",
+    url: "https://drive.google.com/file/d/1JqpqlEIvavudnGb3_ed8H1CUUsrCpDfz/preview",
+    tags: ["Data Analysis", "Power BI"]
+  },
+  {
+    id: "da-15",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 15",
+    url: "https://drive.google.com/file/d/1Kjfrt_HJtfTbvUowR40abkkvn4YviMdS/preview",
+    tags: ["Data Analysis", "Python"]
+  },
+  {
+    id: "da-16",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 16",
+    url: "https://drive.google.com/file/d/1LWvz1Qj6NdKGp4ZXA-hgdjqfpGlXNY1t/preview",
+    tags: ["Data Analysis", "SQL", "Power BI"]
+  },
+  {
+    id: "da-17",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 17",
+    url: "https://drive.google.com/file/d/1MxPwSZhgyaT2eWrCwTW9zzXwmzO1D1Ma/preview",
+    tags: ["Data Analysis", "Excel"]
+  },
+  {
+    id: "da-18",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 18",
+    url: "https://drive.google.com/file/d/1TzdOPxMo54eOQZu7IygG9fxaUYVt9TfT/preview",
+    tags: ["Data Analysis", "Power BI"]
+  },
+  {
+    id: "da-19",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 19",
+    url: "https://drive.google.com/file/d/1W0admZ_H-V8QOwEtSA2l2f2m4_ML-aEw/preview",
+    tags: ["Data Analysis", "Python"]
+  },
+  {
+    id: "da-20",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 20",
+    url: "https://drive.google.com/file/d/1ZzakcJq2TJboui0Ps05JhJnVPpLQgpVm/preview",
+    tags: ["Data Analysis", "Excel", "Power BI"]
+  },
+  {
+    id: "da-21",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 21",
+    url: "https://drive.google.com/file/d/1d6_-vKa28zFxuVORhADmLwg0MgKRavwv/preview",
+    tags: ["Data Analysis", "SQL"]
+  },
+  {
+    id: "da-22",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 22",
+    url: "https://drive.google.com/file/d/1fX0Kxku4gugXStKClYM_4bTSG3wuHZmJ/preview",
+    tags: ["Data Analysis", "Power BI"]
+  },
+  {
+    id: "da-23",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 23",
+    url: "https://drive.google.com/file/d/1g8HkMhwZoxDnle5Mc0reVQAZDnppfJKl/preview",
+    tags: ["Data Analysis", "Excel"]
+  },
+  {
+    id: "da-24",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 24",
+    url: "https://drive.google.com/file/d/1gsD7SX3GLfoxCB36_dl4WfF97_Kxub6n/preview",
+    tags: ["Data Analysis", "Python"]
+  },
+  {
+    id: "da-25",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 25",
+    url: "https://drive.google.com/file/d/1hDWW3sK-c4JIkKfM83q5ezDRKOgKVL69/preview",
+    tags: ["Data Analysis", "Power BI"]
+  },
+  {
+    id: "da-26",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 26",
+    url: "https://drive.google.com/file/d/1hJ_wyjtGX5iN9jaeEk3com4PU6veXObN/preview",
+    tags: ["Data Analysis", "SQL", "Excel"]
+  },
+  {
+    id: "da-27",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 27",
+    url: "https://drive.google.com/file/d/1jXSjLnRyBO65KJuS853tNagWP1foGB3q/preview",
+    tags: ["Data Analysis", "Power BI"]
+  },
+  {
+    id: "da-28",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 28",
+    url: "https://drive.google.com/file/d/1k2j1hVN0CxDWti7U1Z4qYTCFCvob6iiH/preview",
+    tags: ["Data Analysis", "Excel"]
+  },
+  {
+    id: "da-29",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 29",
+    url: "https://drive.google.com/file/d/1rJdZpOzPpcnZW9qbVAHoqXemNpS8RE1Z/preview",
+    tags: ["Data Analysis", "Python", "Power BI"]
+  },
+  {
+    id: "da-30",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 30",
+    url: "https://drive.google.com/file/d/1rMnPsKlSF4r8ZS8xrUUsrGGQ447zMJwn/preview",
+    tags: ["Data Analysis", "SQL"]
+  },
+  {
+    id: "da-31",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 31",
+    url: "https://drive.google.com/file/d/1v69cXtWiT4rdWFytofhWIjb4dCLi5WS0/preview",
+    tags: ["Data Analysis", "Excel"]
+  },
+  {
+    id: "da-32",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 32",
+    url: "https://drive.google.com/file/d/1vEvAh3-aDjkM5_NdGhvtsLRUVlXpI6vl/preview",
+    tags: ["Data Analysis", "Power BI"]
+  },
+  {
+    id: "da-33",
+    diploma: "data-analysis",
+    type: "video",
+    title: "مشروع تحليل البيانات 33",
+    url: "https://drive.google.com/file/d/1yxyWX8W3ipEbil1HmqYR00q4ooAwk8uU/preview",
+    tags: ["Data Analysis", "Python"]
+  },
+
+
+  // ==========================================
+  // UI/UX Design Projects (Behance Links)
+  // ==========================================
+  {
+    id: "uiux-1",
+    diploma: "uiux",
+    type: "behance",
+    title: "تطبيق طعم القرش (To3m EL-Kersh)",
+    url: "https://www.behance.net/gallery/210063197/To3m-EL-Kersh",
+    tags: ["UI/UX", "Case Study", "Mobile App"]
+  },
+  {
+    id: "uiux-2",
+    diploma: "uiux",
+    type: "behance",
+    title: "دراسة حالة تطبيق عجلتي (3agalty)",
+    url: "https://www.behance.net/gallery/203283143/UXUI-Case-Study-3agalty-My-Bike-App",
+    tags: ["UX Case Study", "Mobile App", "Figma"]
+  },
+  {
+    id: "uiux-3",
+    diploma: "uiux",
+    type: "behance",
+    title: "دراسة حالة تطبيق فلورا (Flora)",
+    url: "https://www.behance.net/gallery/203031529/case-study-Flora-%28Flora%29",
+    tags: ["UI/UX", "Flora App", "Case Study"]
+  },
+  {
+    id: "uiux-4",
+    diploma: "uiux",
+    type: "behance",
+    title: "متجر النباتات (Plant Shop Case Study)",
+    url: "https://www.behance.net/gallery/202789243/case-study-plant-shop-%28plant-s-team%29",
+    tags: ["E-Commerce", "Plant Shop", "UI/UX"]
+  },
+  {
+    id: "uiux-5",
+    diploma: "uiux",
+    type: "behance",
+    title: "تطبيق الجيم (Fit Club Gym App)",
+    url: "https://www.behance.net/gallery/213850659/FIT-CLUB-GYM-APP",
+    tags: ["Fitness", "Gym App", "Mobile UI"]
+  },
+  {
+    id: "uiux-6",
+    diploma: "uiux",
+    type: "behance",
+    title: "تطبيق زيارة مصر (Visit Egypt App)",
+    url: "https://www.behance.net/gallery/211736305/visit-Egypt-App",
+    tags: ["Tourism", "Egypt App", "UI/UX"]
+  },
+  {
+    id: "uiux-7",
+    diploma: "uiux",
+    type: "behance",
+    title: "تطبيق متجر النباتات (Plant Store)",
+    url: "https://www.behance.net/gallery/211271031/Plant-Store",
+    tags: ["UI/UX Design", "Plant Store"]
+  },
+  {
+    id: "uiux-8",
+    diploma: "uiux",
+    type: "behance",
+    title: "تطبيق البحث عن وظائف (Job Search App)",
+    url: "https://www.behance.net/gallery/211275843/Job-Search-Mobile-App-Case-Study-(UiUX-Design)",
+    tags: ["Job Search", "Case Study", "UI/UX"]
+  },
+  {
+    id: "uiux-9",
+    diploma: "uiux",
+    type: "behance",
+    title: "معرض أعمال تصميم الواجهات على Behance",
+    url: "http://www.behance.net/basanty",
+    tags: ["Portfolio", "UI/UX Designer"]
+  },
+  {
+    id: "uiux-10",
+    diploma: "uiux",
+    type: "behance",
+    title: "دراسة حالة Swifty (Swifty UI/UX)",
+    url: "https://www.behance.net/gallery/204710569/Swifty-UIUX-Case-study",
+    tags: ["Swifty", "UX Research", "UI Design"]
+  },
+  {
+    id: "uiux-11",
+    diploma: "uiux",
+    type: "behance",
+    title: "دراسة حالة HUGZY (HUGZY UI/UX)",
+    url: "https://www.behance.net/gallery/208150785/HUGZY-UIUX-Case-Study",
+    tags: ["HUGZY", "Mobile UI", "Case Study"]
+  }
+];
